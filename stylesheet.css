@@ -1,9 +1,10 @@
 
 body{
-    color:  #75552b;;
+    color: #75552b;;
     font-family: Calibri;
  background-color:#FFF5DE ;
 }
+
 ul.horizontalmenu{
     background-color:#FFF5DE ;
     float:right;
@@ -19,7 +20,6 @@ ul.horizontalmenu{
     width: 180px;
     float:inline-start;
 }
-
 
 .menu{
     display: inline;
@@ -43,11 +43,11 @@ ul.horizontalmenu{
         margin: 80px;
         margin-top: 100px;
         margin-bottom: 200px;
-        list-style-type: none; 
-       
+        list-style-type: none;   
     }
     
     .servicesAsTable p{
+      font-weight: bold;
         margin: 10px;
         font-size: x-large;
         text-align: center;
@@ -58,6 +58,7 @@ ul.horizontalmenu{
         background-color: #ccad85;
         opacity: 0.8;
     }
+
     .servicesAsTable li{
         display: block;
         font-size: 20px;
@@ -86,11 +87,8 @@ ul.horizontalmenu{
         font-size: medium;
         padding:5px;
         margin: 0px;
-    
       }
       .dropdown ul li:hover{ 
         background-color:rgb(219, 172, 112);
         
       }
-    
-    
