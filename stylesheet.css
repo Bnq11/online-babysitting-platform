@@ -1,0 +1,96 @@
+
+body{
+    color:  #75552b;;
+    font-family: Calibri;
+ background-color:#FFF5DE ;
+}
+ul.horizontalmenu{
+    background-color:#FFF5DE ;
+    float:right;
+    position:relative;
+    margin-top: 30px;
+    list-style-type: none; 
+} 
+
+.logo {
+    position: relative;
+    height: 180px;
+    bottom: 50px;
+    width: 180px;
+    float:inline-start;
+}
+
+
+.menu{
+    display: inline;
+    margin: 10px;
+    padding: 5px;
+    margin-top: 0px;
+    font-weight: bold;
+    list-style-type: none; 
+    }
+    .menu a{
+        font-size: 20px;
+        text-decoration: none;
+        
+    }
+    .menu:hover{
+        display:flexbox;
+        background-color:burlywood;
+    }
+    ul.servicesAsTable{
+        
+        margin: 80px;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        list-style-type: none; 
+       
+    }
+    
+    .servicesAsTable p{
+        margin: 10px;
+        font-size: x-large;
+        text-align: center;
+        color: #75552b;
+        padding: 25px;
+        border: #ac8858 groove 2px;
+        border-radius: 5px;
+        background-color: #ccad85;
+        opacity: 0.8;
+    }
+    .servicesAsTable li{
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        border-bottom: solid 5px  #ac8858;
+        
+      }
+      .servicesAsTable li:hover{
+        background-color:#ccad85;
+      }
+      a{
+        text-decoration: none;
+      }
+      
+      .dropdown ul{
+     display: none;
+     list-style-type: none; 
+      }
+      .dropdown:hover ul{
+        display: block;  
+      }
+      .dropdown ul li{
+        border: 0px solid;
+        background-color: burlywood;
+        font-size: medium;
+        padding:5px;
+        margin: 0px;
+    
+      }
+      .dropdown ul li:hover{ 
+        background-color:rgb(219, 172, 112);
+        
+      }
+    
+    
