@@ -1,25 +1,28 @@
 
 body{
-    color: #75552b;;
+    color: #75552b;
     font-family: Calibri;
  background-color:#FFF5DE ;
 }
 
+.logo {
+  position: relative;
+  height: 180px;
+  bottom: 50px;
+  width: 180px;
+  float:inline-start;
+}
+
+
 ul.horizontalmenu{
-    background-color:#FFF5DE ;
+  border-radius: 5px;
+    background-color:#f0ddb0d4 ;
     float:right;
     position:relative;
     margin-top: 30px;
     list-style-type: none; 
+    padding: 5px;
 } 
-
-.logo {
-    position: relative;
-    height: 180px;
-    bottom: 50px;
-    width: 180px;
-    float:inline-start;
-}
 
 .menu{
     display: inline;
@@ -29,15 +32,18 @@ ul.horizontalmenu{
     font-weight: bold;
     list-style-type: none; 
     }
-    .menu a{
+    li.menu a{
         font-size: 20px;
         text-decoration: none;
-        
+        color: #75552b;
     }
     .menu:hover{
-        display:flexbox;
-        background-color:burlywood;
+      border:rgba(222, 184, 135, 0.829) ;
+      padding: 5px;
+        display:inline-block;
+        background-color:rgba(222, 184, 135, 0.842);
     }
+
     ul.servicesAsTable{
         
         margin: 80px;
@@ -56,7 +62,7 @@ ul.horizontalmenu{
         border: #ac8858 groove 2px;
         border-radius: 5px;
         background-color: #ccad85;
-        opacity: 0.8;
+        opacity: 0.5;
     }
 
     .servicesAsTable li{
@@ -70,8 +76,9 @@ ul.horizontalmenu{
       .servicesAsTable li:hover{
         background-color:#ccad85;
       }
-      a{
+      .servicesAsTable li a{
         text-decoration: none;
+        color: #75552b;
       }
       
       .dropdown ul{
@@ -92,3 +99,30 @@ ul.horizontalmenu{
         background-color:rgb(219, 172, 112);
         
       }
+      .currentJob table , .prevJob table{
+        border-collapse: collapse;
+        width:80%;
+        margin: 120px; 
+      }
+      .currentJob table tr th , .prevJob table tr th{
+        background-color:#FFF5DE;
+        color:#75552b;
+        font-size: 20px;
+        padding: 10px;
+      }
+      .currentJob table tr:nth-child(odd) , .prevJob table tr:nth-child(odd) {
+        background-color:  #bc9056;
+        color:#FFF5DE ;}
+
+        .currentJob table tr:hover , .prevJob table tr:hover{
+          background-color: #786852b7;
+          opacity: 0.5;
+        }
+        caption{
+          font-weight: 800;
+          font-size: 30px;
+          padding: 10px;
+          text-align: left;
+        }
+
+      
