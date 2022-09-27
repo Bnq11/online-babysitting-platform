@@ -3,6 +3,7 @@ body{
   background-blend-mode:multiply ;
   background: url(teddybear.jpg);
   background-size:cover;
+  
     color: #75552b;
     font-family: Calibri;
  background-color:#FFF5DE ;
@@ -91,21 +92,18 @@ ul.horizontalmenu{
      list-style-type: none; 
       }
       .dropdown:hover ul{
-        display: block;  
+      display: block;
       }
       .dropdown ul li{
         border: 0px solid;
-        background-color: burlywood;
-        font-size: medium;
-        padding:5px;
-        margin: 0px;
+        background-color:#FFF5DE;
+        
       }
       .dropdown ul li:hover{ 
-        background-color:rgb(219, 172, 112);
+        background-color:burlywood;
         
       }
       .currentJob table , .prevJob table{
-        border-collapse: collapse;
         width:80%;
         margin: 120px; 
       }
