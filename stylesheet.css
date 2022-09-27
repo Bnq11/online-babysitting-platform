@@ -1,5 +1,8 @@
 
 body{
+  background-blend-mode:multiply ;
+  background: url(teddybear.jpg);
+  background-size:cover;
     color: #75552b;
     font-family: Calibri;
  background-color:#FFF5DE ;
@@ -15,13 +18,12 @@ body{
 
 
 ul.horizontalmenu{
-  border-radius: 5px;
-    background-color:#f0ddb0d4 ;
+    
     float:right;
     position:relative;
     margin-top: 30px;
     list-style-type: none; 
-    padding: 5px;
+   
 } 
 
 .menu{
@@ -46,7 +48,7 @@ ul.horizontalmenu{
 
     ul.servicesAsTable{
         
-        margin: 80px;
+        margin: 100px;
         margin-top: 100px;
         margin-bottom: 200px;
         list-style-type: none;   
@@ -57,12 +59,11 @@ ul.horizontalmenu{
         margin: 10px;
         font-size: x-large;
         text-align: center;
-        color: #75552b;
+        color:  #FFF5DE;
         padding: 25px;
-        border: #ac8858 groove 2px;
         border-radius: 5px;
-        background-color: #ccad85;
-        opacity: 0.5;
+        background-color:#75552b;
+       
     }
 
     .servicesAsTable li{
@@ -71,6 +72,10 @@ ul.horizontalmenu{
         text-align: center;
         padding: 20px;
         border-bottom: solid 5px  #ac8858;
+        background-color: #FFF5DE;
+        opacity: 0.8;
+        margin-left: 10px;
+        margin-right: 10px;
         
       }
       .servicesAsTable li:hover{
@@ -104,18 +109,20 @@ ul.horizontalmenu{
         width:80%;
         margin: 120px; 
       }
-      .currentJob table tr th , .prevJob table tr th{
+       .prevJob table tr td, .currentJob table tr td{
         background-color:#FFF5DE;
         color:#75552b;
         font-size: 20px;
         padding: 10px;
       }
-      .currentJob table tr:nth-child(odd) , .prevJob table tr:nth-child(odd) {
+      .currentJob table tr th , .prevJob table tr th {
+        font-size: 20px;
+        padding: 10px;
         background-color:  #bc9056;
         color:#FFF5DE ;}
 
         .currentJob table tr:hover , .prevJob table tr:hover{
-          background-color: #786852b7;
+          background-color: #c4ab88d6;
           opacity: 0.5;
         }
         caption{
