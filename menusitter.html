@@ -1,47 +1,72 @@
 
 <!DOCTYPE html>
 <html>
-<!--menuparent-->
+<!--menubabysitter-->
     <head>
         <meta charset="utf-8">
-        <title>KinderGuardians</title>
+        <title>Babysitter Services</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
     
     <body>
-   <img class="logo" src="KG.png" alt="KinderGuardians">
-      <ul class="horizontalmenu">
-        <li class="menu"><a href="">  Home  </a></li>
-        <li class="menu"><a href="">  About us  </a></li>
-        <li class="menu"><a href="#cont">  contact us  </a></li>
-        <li class="menu"><a href="">  sign out  </a></li>
-      </ul>
-
-    <nav>
-        
+      <nav >
+        <div class="conatainer">
+            <img src="KG4.png" class="logo" alt="Logo" />
+    
+              
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#footer">About us</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+        </div>
+         </nav>
+    
       <ul class="servicesAsTable">
-        <p>Services</p>
+        <li class="head">Services</li>
         <li> <a> View job request list</a></li>
-        <li>
-          <nav class="dropdown">View my jobs
-           <ul>
-            <li><a href="">Veiw my current jobs</a></li>
-            <li><a href=""> Veiw my previous jobs</a></li>
+        <li>View my jobs
+           <ul class="dropdown">
+            <li><a href="">View my current jobs</a></li>
+            <li><a href=""> View my previous jobs</a></li>
            </ul>
-          </nav>
+    
         </li>
         <li><a href="">View my reviews &amp; rates</a> </li>
         <li><a href=""> View my profile</a></li>
       </ul>
-    </nav>
 
- <footer>
-      <p>
-        <hr>
-        &copy;
-        <br>
-        Contact us:
-        <a id="cont" href="mailto:info@kinderguardians.com">Email</a>
-      </p>
-    </footer>
+
+      <div class= "footer">
+        <div class="col-1">
+         <h3>USEFUL LINKS</h3>
+       
+         <a href="#">About</a>
+         <a href="#">Services</a>
+         <a href="#">Contact</a>
+        </div>
+       
+        <div id="footer"></div>
+        <div class="col-2">
+       
+         <h3>NEWSLETTER</h3>
+         <form>
+       
+           <input type="text" placeholder="Your Email Address" required>
+           <br>
+           <button type="submit">SUBSCRIBE NOW </button>
+         </form>
+        </div>
+       
+        <div class="col-3">
+         <h3>CONTACT US</h3>
+         <a href="mailto:info@kinderguardians.com">info@kinderguardians.com</a>
+         <div class="social-icons"></div>
+         <i class="fab fa-twitter"></i>
+         <i class="fab fa-instagram"></i>
+         </div>
+       </div>
    </body>
