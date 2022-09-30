@@ -288,13 +288,14 @@ text-align: center;
 form input{
    width: 400px;
    height: 45px;
+   text-align: center;
     border-radius: 4px;
-    text-align:center;
     margin-top: 10px;
     margin-bottom: 20px;
     outline: none;
      border: none; 
 }
+
 
 form button{
 
@@ -506,7 +507,7 @@ a{
 .Post-request button{
   position: relative;
   padding: 10px 30px;
-  margin-left: 130px;
+  margin-left: 125px;
 }
 
 .Post-request .services{
@@ -515,6 +516,28 @@ a{
   height: 45px;
    border-radius: 4px;
    text-align:center;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   outline: none;
+    border: none; 
+}
+
+.Post-request #cancel{
+  position:relative;
+  padding: 15px;
+  margin-top: 27px;
+  margin-left: 145px;
+  text-align: center;
+
+}
+
+.Post-request input{
+  font-size: medium;
+  text-indent: 7px ;
+  width: 400px;
+  height: 45px;
+  text-align: start;
+   border-radius: 4px;
    margin-top: 10px;
    margin-bottom: 20px;
    outline: none;
