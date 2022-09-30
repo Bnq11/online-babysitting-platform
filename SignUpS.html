@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet"href=style.css>
+        <link rel="shortcut icon" type="image/x-icon" href=KG1.png>
+      
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Sign Up Babysitter</title>
+</head>
+<body>
+ 
+    
+    <nav>
+        <div class="conatainer">
+            <img src="KG4.png" class="logo" alt="Logo" />
+    
+              
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#footer">About us</a></li>
+                    <li><a href="signIn.html">Sign in</a></li>
+                    
+                </ul>
+        </div>
+         </nav>
+<!-- ========================================================================================== -->
+
+
+
+<section class="Registeration">
+    <form>
+
+        <center><h2>Sign Up</h2></center>
+  
+
+           <div class="container">   
+    
+             
+            <label> <b>Firstname</b> </label>   
+            <input type="text" name="firstname" placeholder= "Firstname" size="15" required >   
+            
+            <label> <b>Lastname</b> </label>    
+            <input type="text" name="lastname" placeholder="Lastname" size="15"required >   
+            <label for="email"><b>Email</b></label>  
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="psw"><b>Password</b></label>  
+                <input type="password" placeholder="Enter Password" name="psw" required>  
+              
+                <label for="psw-repeat"><b>Re-type Password</b></label>  
+                <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+                  
+                <label> <b>City</b> </label>    
+                <input type="text" name="City" placeholder="City" size="15"required >   
+                
+             
+             <label> <b>ID</b>  </label>  
+                <input type="number" name="Enter your id"  size="10"required/>  
+                <label> <b>age</b>  </label>  
+                <input type="number"   required>  <br>
+            <br>
+                <label> <b>Phone</b>  </label>  
+                <input type="tel" name="with country code." value="+966" size="13"required>   
+                <br><br>
+                <label><b> Bio </b> </label> <br>  
+                <textarea cols="40" rows="5" placeholder="bio{such us, years of experience, education, languages, spoken, skills...etc }" value="bio" required>  
+                </textarea>  <br>
+                <div>  
+                    <label> <b>Gender:</b> </label>
+                    <input type="radio" value="Male" name="gender" checked required> Male   
+                    <input type="radio" value="Female" name="gender"required> Female  
+                    </div>  
+                <label> <b>upload photo:</b> </label><br>    
+            <input type="file" onchange="readURL(this)"accept="Image/*" />   <br>
+            
+        
+                
+        
+              
+                
+                <br>
+                <input type="checkbox" checked="checked"> I agree to the terms of ues<a href="#">Terms & Policy</a>.
+                <center><button type="submit" class="registerbtn">Register</button>    </center>
+                <br>
+                <center><label> <b>Already have an account?  <a href="signIn.html">LOG IN</a>  </b> </label><br></center>
+                  
+            </div>  
+
+
+
+                           
+        </form>
+   </section> 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================================================================================== -->
+<div class= "footer">
+    <div class="col-1">
+    <h3>USEFUL LINKS</h3>
+    
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    </div>
+    
+    <div id="footer"></div>
+    <div class="col-2">
+    
+    <h3>NEWSLETTER</h3>
+    <form>
+    
+        <input type="text" placeholder="Your Email Address" required>
+        <br>
+        <button type="submit">SUBSCRIBE NOW </button>
+    </form>
+    </div>
+    
+    <div class="col-3">
+    <h3>CONTACT US</h3>
+    <a href="mailto:info@kinderguardians.com">info@kinderguardians.com</a>
+    <div class="social-icons"></div>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-instagram"></i>
+    </div>
+    </div>
+          <!-- ======================================================================== -->
+
+
+    
+</body>
+</html>
