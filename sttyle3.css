@@ -399,7 +399,7 @@ a{
 .rate{
 position:relative;
 margin: 30px;
-transform:translate(-50%-50%)rotateY(180deg);
+/* transform:translate(-50%-50%)rotateY(180deg); */
 
 
 display:flex;
@@ -475,8 +475,6 @@ color:rgba(255, 255, 255, 0.893);
     .rate label:hover ~ label:after,
 
     .rate input:checked ~label:after
-
-
     {
 
       color: rgb(254, 207, 55);
@@ -505,7 +503,7 @@ color:rgba(255, 255, 255, 0.893);
     
     input{
         border:NONE;
-        padding :300 px;
+        padding:300px;
         color: #fff;
         border-radius:5px;
         /* float: right; */
