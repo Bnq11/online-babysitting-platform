@@ -94,7 +94,7 @@ padding:12px;
     color: #fff;
   }*/
   
-  
+ 
   form input{
      width: 300px;
      height: 45px;
@@ -110,7 +110,7 @@ padding:12px;
   form button{
   
     background: transparent;
-    border: 2px solid #fff;
+    border: 2px solid rgba(255, 255, 255, 0.66);
     color: #fff;
     border-radius: 30px;
     padding: 10px 30px;
@@ -139,9 +139,13 @@ padding:12px;
   .col-3 a:hover{
     color: #fff;
   }
+  
+   /*=========================================*/
+  
+  
   .set{
-    border:1px soild #fff;
-    background-color: #fff;
+    border:1px soild rgba(255, 255, 255, 0.578);
+    background-color: rgba(255, 255, 255, 0.578);
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 100px;
@@ -175,19 +179,21 @@ padding:12px;
 
 
 .buttons{
-	
-	padding :15 px;
+  border:NONE;
+
+	padding :300 px;
 	color: #fff;
-	background:#D8BF98;
+	background:#75552b;
 	border-radius:5px;
 	float: right;
 margin: 20px;
 }
+
 .buttons1{
-	
-	padding :15 px;
+	border:NONE;
+	padding :300 px;
 	color: #fff;
-	background:#D8BF98;
+	background:#75552b;
 	border-radius:5px;
 	float: right;
 

@@ -122,7 +122,8 @@ input{
   .bookings{
 
 
-    text-align: center; 
+   /* text-align: center;   */
+   padding:200px;
 
 margin-left : 30%;
 
@@ -153,7 +154,25 @@ list-style-type:none;
 
   }
 
+  .buttonrev{
+    border:NONE;
+    padding :300 px;
+    color: #fff;
+    background:#75552b;
+    border-radius:5px;
+    float: right;
 
+  }
+  .buttone{
+    border:NONE;
+    padding :300 px;
+    color: #fff;
+    background:#75552b;
+    border-radius:5px;
+    float: right;
+  
+
+  }
   
 
 
