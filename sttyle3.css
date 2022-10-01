@@ -385,15 +385,10 @@ top:50%;
 
 left:50%;
 
-transform:translate(-50%-50%);
+transform:translate(-50%-50%)rotateY(180deg);
 
 
 display:flex;
-
-
-
-
-
 
 
 
@@ -418,7 +413,7 @@ cursor:pointer;
 
 width:50px;
 
-background:#ccc;
+/* background:rgba(204, 204, 204, 0); */
 
 
 }
@@ -435,7 +430,7 @@ position: relative;
 display: block;
 font-size: 50px;
 
-color:grey;
+color:rgba(128, 128, 128, 0.157);
 
 }
 
@@ -458,4 +453,23 @@ color:grey;
 
     text-shadow: 0 2px 5px rgba(0,0,0,.5);
     
+    }
+
+
+    .rate label:hover:after,
+
+    .rate label:hover ~ label:after,
+
+    .rate input:checked ~label:after
+
+
+    {
+
+
+        opacity: 1;
+
+
+
+
+
     }
