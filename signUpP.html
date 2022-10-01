@@ -56,15 +56,19 @@
                <input type="password" placeholder="Retype Password" name="psw-repeat" required><br>  
                <label> <b>City</b> </label>    
                <input type="text" name="City" placeholder="City" size="15"required />   <br>
+               
+               
                <label> <b>Current Address</b>  </label> <br>
-                <textarea cols="40" rows="5" placeholder="Current Address" value="address" required>  
-                </textarea>  <br>
+               <input type="textarea" placeholder="Street Address - city - Zip Code "    required> 
+               <!-- <textarea rows="5" cols="40"  required >   -->
+                <!-- </textarea>   -->
+                <br>
                
                 <div>  
                     <label> <b>Gender:</b> </label>
-                    <input type="radio" value="Male" name="gender" checked > Male   
-                    <input type="radio" value="Female" name="gender"> Female  
-                    </div>  
+                    <input type="radio" value="Male" name="gender"  required> Male   
+                    <input type="radio" value="Female" name="gender"required> Female  
+                    </div> 
                     
                
                 <label> <b>upload photo:</b> </label> 
@@ -78,7 +82,9 @@
                 
                 <br>
                 <input type="checkbox" checked="checked"> I agree to the terms of ues<a href="#">Terms & Policy</a>.<br>
-            <center><button type="submit" class="registerbtn">Register</button>    <br>
+             <center><a href="menuparent.html" ><button class="registerbtn">Register</button></a> 
+                <!-- <button type="submit"id="1" class="registerbtn">Register</button>    -->
+                <br>
                 <br>
                 <label> <b>Already have an account?  <a href="signIn.html">LOG IN</a>  </b> </label><br></center>
             </div>  
