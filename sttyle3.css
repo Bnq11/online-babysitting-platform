@@ -3,7 +3,7 @@ body{
     background:url(teddybear.jpg);
     background-size:cover;
     font-family: poppins;
-
+padding:0;
 
     }
   
@@ -375,16 +375,29 @@ a{
 
 /* end navigation  and footer */
 
-
+.rating{
+  box-sizing: border-box;
+  border-radius: 40px;
+    margin-top: 150px;
+    margin-left: 400px;
+    margin-bottom: 500px;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    width: 50%;
+    height: 10px;
+    background: #d7b593;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
 
 
 .rate{
-position:absolute;
-
-top:50%;
-
-left:50%;
-
+position:relative;
+margin: 30px;
 transform:translate(-50%-50%)rotateY(180deg);
 
 
@@ -467,6 +480,18 @@ color:rgba(255, 255, 255, 0.893);
 
 color: rgb(254, 207, 55);
         opacity: 1;
+
+
+
+
+
+    }
+
+
+
+
+    .rate .com{
+resize: none;
 
 
 
