@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF=8">
+        <meta charset="UTF-8">
         <title>Manage My Profile</title>
         <link rel="stylesheet" href="sttyle2.css">
 
@@ -38,7 +38,7 @@
                     <ul>
                         <li><a href="Home.html">Home</a></li>
                         <li><a href="#footer">About us</a></li>
-                        <li><a href="signIn.html">Sign in</a></li>
+                        <li><a href="Home.html">Sign out</a></li>
                         
                     </ul>
             </div>
@@ -50,27 +50,29 @@
             <center><img class="pro" src="157-1579943_no-profile-picture-round.png" alt="user's photo"> </center>
             <h1>Personal Information</h1>
             <div class="in"><Label for="fname">First name</Label>
-            <input type="text" name="First name" value="Firstname" id="fname"></div>
+            <input type="text" name="First name" value="Firstname" id="fname" required></div>
             
                 <div class="in">  <Label for="sname">Last name</Label>
-            <input type="text" name="Second name" value="Lastname" id="sname"></div>
+            <input type="text" name="Second name" value="Lastname" id="sname" required></div>
           
                     <div class="in"> <Label for="pass">Password</Label>
-            <input type="password" name="password" value="Password" id="pass"></div>
+            <input type="password" name="password" value="Password" id="pass" required></div>
            
                         <div class="in">  <Label for="email">Email Address</Label>
-            <input type="email" name="email"  value="Email"id="email"></div>
+            <input type="email" name="email"  value="Email" id="email" required></div>
             <div class="in">  <Label for="phonenum">Phone Number</Label>
-                <input type="tel" name="phonenum"  value="0555555555"id="phonenum"></div>
+                <input type="tel" name="phonenum"  value="0555555555" id="phonenum" required></div>
 
             <div class="in">  <Label for="city">City</Label>
                 <input type="text" name="city" value="City" id="city"></div>
 
                 <div class="in"><label for="loc">Location</label>
                 
-                    <input  type="text" name="loc" value="Location"id="loc">
+                    <input  type="text" name="loc" value="Location" id="loc" required>
                 </div>
-                <div class="in"><Label for="BIO">Bio</Label>
+
+                
+                <div class="in"><Label>Bio</Label>
                     <textarea  name="bio" id="bio" rows="5" cols="55">
 my bio
                     </textarea>
