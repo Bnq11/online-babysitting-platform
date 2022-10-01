@@ -243,102 +243,123 @@
 
 
 
-
-     
-.footer{
-  margin-top: 800px;
-  width:100%;
-  padding: 100px 15%;
-  background: #d7b593;
-  color:#75552b;
-  display: flex;
-  
-}
-
-.footer div{
-
-text-align: center;
-}
-
-.col-2{
-  flex-grow: 2;
-}
-  
-
-.footer div h3{
-
-  font-weight: 300;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
- 
-
-.col-1 a{
-  display: block;
-  text-decoration: none;
-  color:#75552b;
-  margin-bottom: 10px;
-}
-
-.col-1 a:hover{
-  color: #fff;
-}
-
-form input{
-   width: 400px;
-   height: 45px;
-   text-align: center;
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    outline: none;
-     border: none; 
-}
-
-
-form button{
-
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 30px;
-  padding: 10px 30px;
-  font-size: 15px;
-  cursor: pointer;
-
-
-}
-
-
-
-.social-icons{
-  margin-top: 30px;
-}
-
- .social-icons i{
-  font-size: 22px;
-  margin: 10px;
-  cursor: pointer;
- }
-
- .col-3 a{
-  color:#75552b;
- }
-
-
-
-.col-3 a:hover{
-  color: #fff;
-}
-
-
-
-
-
-
-
-
+      .footer div{
+        margin: 20px;
+        text-align: center;
+        background: #d7b593;
+        }
+        
+        .col-2{
+          flex-grow: 2;
+        }
+          
+        
+        .footer div h3{
+        
+          font-weight: 300;
+          margin-bottom: 30px;
+          letter-spacing: 1px;
+        }
+        
+         
+        
+        .col-1 p{
+          display: block;
+          text-decoration: none;
+          color:#75552b;
+          margin-bottom: 10px;
+        }
+        
+       /* .col-1 a:hover{
+          color: #fff;
+        }*/
+        
+       /*==========================================================================*/ 
+        form input{
+           width: 300px;
+           height: 45px;
+           text-align: center;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            outline: none;
+             border: none; 
+        }
+        
+        
+        form button{
+        
+          background: transparent;
+          border: 2px solid #fff;
+          color: #fff;
+          border-radius: 30px;
+          padding: 10px 30px;
+          font-size: 15px;
+          cursor: pointer;
+        
+        
+        }
+        
+        .social-icons{
+          margin-top: 30px;
+        }
+        
+         .social-icons i{
+          font-size: 22px;
+          margin: 10px;
+          cursor: pointer;
+         }
+        
+         .col-3 a{
+          color:#75552b;
+         }
+        
+        
+        
+        .col-3 a:hover{
+          color: #fff;
+        }
+      
+        .footer{
+           margin-top: 400px;
+         width:100%;
+          padding: 100px 15%;  
+          background: #d7b593;
+          color:#75552b;
+          /* display: flex;
+        */
+        } 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        *{
+          margin: 0px;
+          padding: 0px;
+           font-family: poppins;
+          box-sizing: border-box;
+      }
 
 /*===========================================================*/
 
@@ -373,13 +394,13 @@ a{
     align-items: center;
     flex-direction: column;
     background-size: cover;
-          
+
 }
 
 .sign-in-form h2{
   position: relative;
   margin-bottom: 70px;
-  
+  text-align:center;
   font-weight: 600;
   text-align: center;
   color:#75552b;
@@ -392,8 +413,11 @@ a{
   border: none;  
   position: relative;
   padding: 10px 30px;
- 
+  text-align:center;
   cursor: pointer;
+  text-align:center;
+  align-items: center;
+margin-left: 150px;
 }
 
 
@@ -408,7 +432,8 @@ a{
    margin-top: 10px;
    margin-bottom: 20px;
    outline: none;
-    border: none; }
+    border: none;
+ }
 
    
     .sign-in-form input[type=checkbox]{
@@ -418,6 +443,9 @@ border-radius:0.2em;
 width: 1em;
 height:1em;
 margin-left: 10px;
+text-align:center;
+align-items: center;
+margin-left: 125px;
     }
 
 
@@ -446,7 +474,8 @@ margin-left: 10px;
   .Registeration h2{
     position: relative;
     margin-bottom: 70px;
-    
+    text-align: center;
+
     font-weight: 600;
     text-align: center;
     color:#75552b;
@@ -459,7 +488,8 @@ margin-left: 10px;
     border: none;  
     position: relative;
     padding: 10px 30px;
-  
+    margin-left: 150px;
+
     cursor: pointer;
   }
   
