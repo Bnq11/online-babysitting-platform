@@ -76,6 +76,10 @@ text-align: left;
     
       cursor: pointer;
   }
+
+  .button:hover{
+    color: burlywood;
+  }
   input{
     
   

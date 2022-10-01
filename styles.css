@@ -471,6 +471,10 @@ a{
   margin-right: 60px;
 }
 
+.save:hover{
+  color:burlywood;
+}
+
 
 .Post-request .services{
   position: relative;
@@ -493,7 +497,8 @@ a{
 
 }
 
-#cancel:hover{
+#cancel:hover,
+#post:hover{
 color: burlywood;
 }
 
