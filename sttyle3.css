@@ -389,7 +389,7 @@ transform:translate(-50%-50%)rotateY(180deg);
 
 
 display:flex;
-
+flex-direction: row-reverse;
 
 
 }
@@ -430,7 +430,7 @@ position: relative;
 display: block;
 font-size: 50px;
 
-color:rgba(128, 128, 128, 0.157);
+color:rgba(255, 255, 255, 0.893);
 
 }
 
@@ -445,8 +445,8 @@ color:rgba(128, 128, 128, 0.157);
     display: block;
     font-size: 50px;
     
-    color:yellow;
-    top:0;
+    color:rgb(255, 255, 255);
+    top:  0;
 
     opacity:1;
     transition: .5s;
@@ -465,7 +465,7 @@ color:rgba(128, 128, 128, 0.157);
 
     {
 
-
+color: rgb(254, 207, 55);
         opacity: 1;
 
 
