@@ -427,7 +427,7 @@ background:#ccc;
 .rate label:before{
 
 
-content: 'f005';
+content: '\f005';
 
 font-family: fontAwesome;
 
@@ -442,7 +442,7 @@ color:grey;
 .rate label:after{
 
 
-    content: 'f005';
+    content: '\f005';
     
     font-family: fontAwesome;
     
