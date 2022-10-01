@@ -1,200 +1,10 @@
-
-
-.profile{
-    
-
-
-  box-sizing: border-box;
-  border-radius: 50px;
-    margin-top: 150px;
-    margin-left: 440px;
-    margin-bottom: 500px;
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
-    width: 40%;
-    height:40%;
-    background: #d7b593;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-
-    
-}
-
-
-
-.profile input{
-
-
-  text-align: left;
-  
-  }
-
-
-.pro{
-    width: 80px;
-    height: 70px;
-   /* margin-left: 42%;  */
-
-   /* margin-right: 50%; */
-   /* margin-top: -10px; */
-}
-.in{
-   margin: 10px;
-   padding-top: 10px;
-}
-h1{ 
-  position: relative;
-  margin-bottom: 70px;
-  
-  font-weight: 600;
-  text-align: center;
-  color:#75552b;
-  
-
-
-}
-label{
-    margin-left: 5%;
-    font-size: large;
-}
-.button{
-  background-color:#75552b; 
-    border: none;  
-    position: relative;
-    padding: 10px 30px;
-  
-    cursor: pointer;
-
-    
-}
-
-
-
-
-
-input{
-  
-
-
-  font-size: medium;
-    text-indent: 7px ;
-    width: 400px;
-    height: 45px;
-    text-align: start;
-     border-radius: 4px;
-     margin-top: 10px;
-     margin-bottom: 20px;
-     outline: none;
-      border: none;
-
-}
-
-
-
-
-      /*  END BOX      */
-
-
-      .r{
-
-      margin-top: 90px;
-
-      margin-right: 60px;
-
-
-
-      }
-
-
-
-
-  
-  
-  
-
-
-
-
-
-   
-      
-        
-    
-  
-  
-     
-
-
-
-  .bookings{
-
-
-   /* text-align: center;   */
-   padding:200px;
-
-margin-left : 30%;
-
-    background-color: #d7b593;
-
-    opacity: 0.7;
-
-    border-radius: 15%;
-
-    padding-bottom: 20px;
-
-    margin: 0 300px ;
-
-    padding-top: 20px;
-    
-list-style-type:none;
-
-    
-
-    
-  }
-
-  ul{
-
-    list-style-type:none;
-
-
-
-  }
-
-  .buttonrev{
-    border:NONE;
-    padding :300 px;
-    color: #fff;
-    background:#75552b;
-    border-radius:5px;
-    float: right;
-
-  }
-  .buttone{
-    border:NONE;
-    padding :300 px;
-    color: #fff;
-    background:#75552b;
-    border-radius:5px;
-    float: right;
-  
-
-  }
-  
-
-
-
-
-
-  body{
+body{
     background-blend-mode:multiply ;
     background:url(teddybear.jpg);
     background-size:cover;
     font-family: poppins;
+
+
     }
   
   
@@ -568,6 +378,84 @@ a{
 
 
 
-  
+.rate{
+position:absolute;
 
- 
+top:50%;
+
+left:50%;
+
+transform:translate(-50%-50%);
+
+
+display:flex;
+
+
+
+
+
+
+
+
+}
+
+
+.rate input{
+
+
+display:none;
+
+
+
+}
+
+
+.rate label{
+display:block;
+
+cursor:pointer;
+
+
+width:50px;
+
+background:#ccc;
+
+
+}
+
+
+.rate label:before{
+
+
+content: 'f005';
+
+font-family: fontAwesome;
+
+position: relative;
+display: block;
+font-size: 50px;
+
+color:grey;
+
+}
+
+.rate label:after{
+
+
+    content: 'f005';
+    
+    font-family: fontAwesome;
+    
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    
+    color:yellow;
+    top:0;
+
+    opacity:1;
+    transition: .5s;
+
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+    
+    }
