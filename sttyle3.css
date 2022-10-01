@@ -499,8 +499,22 @@ resize: none;
 
     }
 
-    .com{
+    
 
+    input{
+
+
+        border:NONE;
+        padding :300 px;
+        color: #fff;
+        background:#75552b;
+        border-radius:5px;
+        /* float: right; */
+    
+    }
+    h1{
+       color: #75552b;
+font-size: xx-large;
 
 
 
