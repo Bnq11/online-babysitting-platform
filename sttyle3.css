@@ -289,6 +289,7 @@ color: #fff;
 form input{
  width: 400px;
  height: 45px;
+ color: #fff;
  text-align: center;
   border-radius: 4px;
   margin-top: 10px;
@@ -478,7 +479,7 @@ color:rgba(255, 255, 255, 0.893);
 
     {
 
-color: rgb(254, 207, 55);
+      color: rgb(254, 207, 55);
         opacity: 1;
 
 
@@ -490,31 +491,29 @@ color: rgb(254, 207, 55);
 
 
 
-    .rate .com{
-resize: none;
 
-
-
-
-
+    .rating .review{
+      background-color:#75552b; 
+      border: none;
+      border-radius: 20px; ;  
+      position: relative;
+      margin-top: 40px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
     }
-
     
-
     input{
-
-
         border:NONE;
         padding :300 px;
         color: #fff;
-        background:#75552b;
         border-radius:5px;
         /* float: right; */
     
     }
     h1{
        color: #75552b;
-font-size: xx-large;
+       font-size: xx-large;
 
 
 
