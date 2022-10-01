@@ -381,7 +381,7 @@ a{
   box-sizing: border-box;
   border-radius: 20px;
     margin-top: 150px;
-    margin-left: 400px;
+    margin-left: 500px;
     margin-bottom: 500px;
     position: relative;
     min-height: 100vh;
@@ -455,7 +455,7 @@ margin-left: 125px;
     box-sizing: border-box;
     border-radius: 20px;
       margin-top: 150px;
-      margin-left: 400px;
+      margin-left: 500px;
       margin-bottom: 500px;
       position: relative;
       min-height: 100vh;
@@ -488,11 +488,14 @@ margin-left: 125px;
     border: none;  
     position: relative;
     padding: 10px 30px;
-    margin-left: 150px;
+    margin-left: 130px;
 
     cursor: pointer;
   }
   
+  .Registeration button:hover{
+    color:burlywood;
+  }
   
   
   .Registeration input{
