@@ -5,7 +5,12 @@ body{
   font-family: poppins;
   color: #75552b;
   }
-
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
 
 nav{
 height: 95px;
@@ -58,7 +63,7 @@ padding:12px;
   }
   
   .footer div{
-  
+  margin: 20px;
   text-align: center;
   }
   
@@ -76,20 +81,20 @@ padding:12px;
   
    
   
-  .col-1 a{
+  .col-1 p{
     display: block;
     text-decoration: none;
     color:#75552b;
     margin-bottom: 10px;
   }
   
-  .col-1 a:hover{
+ /* .col-1 a:hover{
     color: #fff;
-  }
+  }*/
   
   
   form input{
-     width: 400px;
+     width: 300px;
      height: 45px;
      text-align: center;
       border-radius: 4px;
