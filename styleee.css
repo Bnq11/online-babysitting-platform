@@ -54,94 +54,110 @@ padding:12px;
   nav ul li a:hover{
     color:burlywood;
   }
-  .footer{
-    margin-top: 500px;
-    width:100%;
-    padding: 100px 15%;
-    background: #d7b593;
-    color:#75552b;
-    display: flex;
- 
-  }
-  
+
+
+
+
+
+
   .footer div{
-  margin: 20px;
-  text-align: center;
-  }
-  
-  .col-2{
-    flex-grow: 2;
-  }
+    margin: 20px;
+    text-align: center;
+    background: #d7b593;
+    }
     
+    .col-2{
+      flex-grow: 2;
+    }
+      
+    
+    .footer div h3{
+    
+      font-weight: 300;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+    
+     
+    
+    .col-1 p{
+      display: block;
+      text-decoration: none;
+      color:#75552b;
+      margin-bottom: 10px;
+    }
+    
+   /* .col-1 a:hover{
+      color: #fff;
+    }*/
+    
+   /*==========================================================================*/ 
+    form input{
+       width: 300px;
+       height: 45px;
+       text-align: center;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        outline: none;
+         border: none; 
+    }
+    
+    
+    form button{
+    
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 30px;
+      font-size: 15px;
+      cursor: pointer;
+    
+    
+    }
+    
+    .social-icons{
+      margin-top: 30px;
+    }
+    
+     .social-icons i{
+      font-size: 22px;
+      margin: 10px;
+      cursor: pointer;
+     }
+    
+     .col-3 a{
+      color:#75552b;
+      text-decoration: none;
+     }
+    
+    
+    
+    .col-3 a:hover{
+      color: #fff;
+    }
   
-  .footer div h3{
-  
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-  }
-  
-   
-  
-  .col-1 p{
-    display: block;
-    text-decoration: none;
-    color:#75552b;
-    margin-bottom: 10px;
-  }
-  
- /* .col-1 a:hover{
-    color: #fff;
-  }*/
-  
- 
-  form input{
-     width: 300px;
-     height: 45px;
-     text-align: center;
-      border-radius: 4px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      outline: none;
-       border: none; 
-  }
-  
-  
-  form button{
-  
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.66);
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-    cursor: pointer;
-  
-  
-  }
-  
-  .social-icons{
-    margin-top: 30px;
-  }
-  
-   .social-icons i{
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
-   }
-  
-   .col-3 a{
-    color:#75552b;
-   }
+    .footer{
+       margin-top: 400px;
+     width:100%;
+      padding: 100px 15%;  
+      background: #d7b593;
+      color:#75552b;
+      /* display: flex;
+    */
+    } 
   
   
   
-  .col-3 a:hover{
-    color: #fff;
-  }
+  
   
    /*=========================================*/
   
+
+
+
+
   
   .set{
     border:1px soild rgba(255, 255, 255, 0.578);
@@ -179,25 +195,93 @@ padding:12px;
 
 
 .buttons{
-  border:NONE;
+  /* border:NONE;
 
 	padding :300 px;
 	color: #fff;
 	background:#75552b;
 	border-radius:5px;
 	float: right;
-margin: 20px;
+margin: 20px; */
+background-color:#75552b; 
+color:#fff;
+border: none;
+border-radius: 20px; ;  
+position: relative;
+margin-top: 40px;
+padding: 10px 30px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.buttons:hover{
+
+  color: burlywood;
 }
 
 .buttons1{
-	border:NONE;
+	/* border:NONE;
 	padding :300 px;
 	color: #fff;
 	background:#75552b;
 	border-radius:5px;
-	float: right;
+	float: right; */
+
+background-color:#75552b; 
+color:#fff;
+border: none;
+border-radius: 20px; ;  
+position: relative;
+margin-top: 40px;
+padding: 10px 30px;
+font-size: 16px;
+cursor: pointer;
+margin-left: 600px;
 
 }
+.buttons1:hover{
+
+  color: burlywood;
+}
+
+
+.buttons2{
+  background-color:#75552b; 
+color:#fff;
+border: none;
+border-radius: 20px; ;  
+position: relative;
+margin-top: 40px;
+padding: 10px 30px;
+font-size: 16px;
+cursor: pointer;
+margin-left: 400px;
+}
+
+.buttons3{
+
+  background-color:#75552b; 
+  color:#fff;
+  border: none;
+  border-radius: 20px; ;  
+  position: relative;
+  margin-top: 40px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 450px;
+}
+
+.buttons2:hover,
+.buttons3:hover{
+
+  color:burlywood;
+}
+
+
+
+
+
  /*ul{
     float: left;
     margin-left:20px;

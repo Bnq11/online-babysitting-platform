@@ -472,8 +472,6 @@ a{
 }
 
 
-
-
 .Post-request .services{
   position: relative;
   width: 400px;
@@ -493,6 +491,10 @@ a{
   margin-left: 145px;
   text-align: center;
 
+}
+
+#cancel:hover{
+color: burlywood;
 }
 
 .Post-request input{
