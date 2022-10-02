@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "stylesheet"href=style.css>
+    <link rel = "stylesheet" href=style.css>
         <link rel="shortcut icon" type="image/x-icon" href=KG1.png>
       
         <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
 <section class="Registeration">
     <form>
 
-        <center><h2>Sign Up</h2></center>
+        <h2>Sign Up</h2>
   
 
            <div class="container">   
@@ -47,39 +47,40 @@
             <input type="text" name="firstname" placeholder= "Firstname" size="15" required >   
             
             <label> <b>Lastname</b> </label>    
-            <input type="text" name="lastname" placeholder="Lastname" size="15"required >   
+            <input type="text" name="lastname" placeholder="Lastname" size="15" required >   
             <label for="email"><b>Email</b></label>  
-                <input type="text" placeholder="Enter Email" name="email" required>
-                <label for="psw"><b>Password</b></label>  
-                <input type="password" placeholder="Enter Password" name="psw" required>  
-              
-                <label for="psw-repeat"><b>Re-type Password</b></label>  
-                <input type="password" placeholder="Retype Password" name="psw-repeat" required>  
+            <input type="email" placeholder="Enter Email" id = "email" name="email" required>  <br>
+             
+               <label for="psw"><b>Password</b></label>  
+               <input type="password" placeholder="Enter Password" id="psw" name="psw" required>  <br>
+             
+               <label for="psw-repeat"><b>Re-type Password</b></label>  
+               <input type="password" placeholder="Retype Password" id="psw-repeat" name="psw-repeat" required><br>  
                   
                 <label> <b>City</b> </label>    
-                <input type="text" name="City" placeholder="City" size="15"required >   
+                <input type="text" name="City" placeholder="City" size="15" required >   
                 
              
              <label> <b>ID</b>  </label>  
-                <input type="number" name="Enter your id"  size="10"required/>  
+                <input type="number" name="Enter your id"   required/>  
                 <label> <b>age</b>  </label>  
                 <input type="number"   required>  <br>
             <br>
                 <label> <b>Phone</b>  </label>  
-                <input type="number" name="with country code." value="+966" size="13" required>   
+                <input type="number" name="with country code."  required>   
                 <br><br>
                 <label><b> Bio </b> </label> <br>  
-                <input type="textarea" placeholder="bio{such us, years of experience,...etc }"    required> 
+                <input type="text" placeholder="bio{such us, years of experience,...etc }"    required> 
                 
                 <!-- <textarea cols="40" rows="5" placeholder="bio{such us, years of experience, education, languages, spoken, skills...etc }" value="bio" required>   -->
                 <!-- </textarea>  <br> -->
                 <div>  
                     <label> <b>Gender:</b> </label>
                     <input type="radio" value="Male" name="gender"  required> Male   
-                    <input type="radio" value="Female" name="gender"required> Female  
+                    <input type="radio" value="Female" name="gender" required> Female  
                     </div>  
                 <label> <b>upload photo:</b> </label><br>    
-            <input type="file" onchange="readURL(this)"accept="Image/*" />   <br>
+            <input type="file" onchange="readURL(this)" accept="Image/*" />   <br>
             
         
                 
@@ -88,7 +89,8 @@
                 
                 <br>
                 <input type="checkbox" checked="checked"> I agree to the terms of ues<a href="#">Terms & Policy</a>.
-                <a href="menusitter.html"><button type="submit" class="registerbtn">Register</button> </a>   
+                <!-- <a href="menusitter.html"><button type="submit" class="registerbtn">Register</button> </a>    -->
+                <button type="submit" id="1" class="registerbtn">Register</button>
                 <br><br>
                <label> <b>Already have an account?  <a href="signIn.html">LOG IN</a>  </b> </label><br>
                   
