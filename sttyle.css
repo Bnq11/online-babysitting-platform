@@ -1,5 +1,6 @@
 
 
+
 .profile{
     
 
@@ -20,6 +21,7 @@
     align-items: center;
     flex-direction: column;
     background-size: cover;
+    /* text-align: left; */
 
     
 }
