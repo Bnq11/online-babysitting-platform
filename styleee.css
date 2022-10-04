@@ -181,7 +181,7 @@ padding:12px;
 .list{
     display: block;
     margin-left: 30px;
-    padding: 40px;
+    padding: 0;
     font-weight: bold;
    /* list-style-type: none;*/
 	
@@ -269,7 +269,7 @@ margin-left: 400px;
   padding: 10px 30px;
   font-size: 16px;
   cursor: pointer;
-  margin-left: 450px;
+ margin-left: 400px; 
 }
 
 .buttons2:hover,
