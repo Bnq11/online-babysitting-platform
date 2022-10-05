@@ -50,7 +50,7 @@
 }
 h1{ 
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   
   font-weight: 600;
   text-align: center;
@@ -194,6 +194,13 @@ list-style-type:none;
   
 
   }
+
+  #myTable{
+    margin-left:125px ;
+  }
+
+
+
 
   .buttone:hover,
   .buttonrev:hover{
