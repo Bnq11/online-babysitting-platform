@@ -428,35 +428,17 @@ a{
 }
 
 .Post-request{
-  /* box-sizing: border-box;
-  border-radius: 40px;
-  margin-block-start: 100px; 
-  margin :  auto; 
-  margin-block-end: 50px;
-    position: relative;
-    padding: 60px 100px;
-    width: 80%;
-    height:25%;
-    background: #d7b593;
-    display: flex;
-    flex-wrap: wrap ;
-     justify-content: space-between;  
-     align-items: center;
-    flex-direction:column;
-    background-size: cover; */
     box-sizing: border-box; 
     border-radius: 20px; 
     margin-block-start: 500px;
-    /* margin-block-start: 50px;  */
     margin :  auto; 
-    margin-block-end: 50px; 
+    margin-block-end: 30px; 
     position: relative; 
-    min-block-size: 80vh; 
+    min-block-size: 40vh; 
     display: block; 
     padding: 50px 50px ; 
     inline-size: 80%; 
     background: #d7b593; 
-     
     background-size: cover;
 } 
 
@@ -506,8 +488,8 @@ a{
  } 
 
 .Post-request  .save{
-  margin-top: 5px;
-  margin-left: 115px;
+  margin-top: 0px;
+  margin-left: 455px;
 }
 
 .save:hover{
@@ -528,16 +510,14 @@ a{
 }
 
 .Post-request #cancel{
-  position:relative;
-  margin-top: 10px;
- margin-left: 35px;
-  text-align: center;
+ display: inline;
+ margin-left: 20px;
 }
 
 .Post-request #post{
-  margin-bottom: 80px;
-  margin-top: 10px;
-  margin-left: 40px;
+  display: inline;
+  margin-left: 385px;
+
 }
 
 
