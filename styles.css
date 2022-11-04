@@ -428,27 +428,66 @@ a{
 }
 
 .Post-request{
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   border-radius: 40px;
-    margin-top: 150px;
-    margin-left: 500px;
-    margin-bottom: 500px;
+  margin-block-start: 100px; 
+  margin :  auto; 
+  margin-block-end: 50px;
     position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
-    width: 35%;
-    height:40%;
+    padding: 60px 100px;
+    width: 80%;
+    height:25%;
     background: #d7b593;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap ;
+     justify-content: space-between;  
+     align-items: center;
+    flex-direction:column;
+    background-size: cover; */
+    box-sizing: border-box; 
+    border-radius: 20px; 
+    margin-block-start: 500px;
+    /* margin-block-start: 50px;  */
+    margin :  auto; 
+    margin-block-end: 50px; 
+    position: relative; 
+    min-block-size: 80vh; 
+    display: block; 
+    padding: 50px 50px ; 
+    inline-size: 80%; 
+    background: #d7b593; 
+     
     background-size: cover;
+} 
+
+
+
+
+
+.left{ 
+  float: left; 
+  display: inline;
+  width: 50%; 
+  padding: 60px;
+  margin-top: 20px; 
+} 
+ 
+.right{ 
+  float: right; 
+  width: 50%; 
+  display: inline;
+  margin-top: 20px; 
+  padding: 60px;
+}
+
+ .Post-request .form{
+  display: inline-block;
+  
 }
 
 .Post-request h2{
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 25px;
   margin-left: 10px;
   font-weight: 600;
   text-align: center;
@@ -459,16 +498,16 @@ a{
 .Post-request button {
   position: relative;
   padding: 10px 30px;
-  margin-left: 125px;
-  background-color:#75552b; 
+   /* margin-left: auto;  */
+   background-color:#75552b; 
   border: none;  
   position: relative;
-  cursor: pointer;
-}
+  cursor: pointer; 
+ } 
 
 .Post-request  .save{
-  margin-top: 15px;
-  margin-right: 60px;
+  margin-top: 5px;
+  margin-left: 115px;
 }
 
 .save:hover{
@@ -481,8 +520,8 @@ a{
   width: 400px;
   height: 45px;
    border-radius: 4px;
-   text-align:center;
-   margin-top: 10px;
+    text-align:center; 
+    margin-top: 10px;
    margin-bottom: 20px;
    outline: none;
     border: none; 
@@ -490,16 +529,24 @@ a{
 
 .Post-request #cancel{
   position:relative;
-  padding: 15px;
-  margin-top: 27px;
-  margin-left: 145px;
+  margin-top: 10px;
+ margin-left: 35px;
   text-align: center;
-
 }
 
-#cancel:hover,
+.Post-request #post{
+  margin-bottom: 80px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+
 #post:hover{
 color: burlywood;
+}
+
+#cancel:hover{
+  color:red;
 }
 
 .Post-request input{
@@ -513,4 +560,6 @@ color: burlywood;
    margin-bottom: 20px;
    outline: none;
     border: none; 
-}
+}  
+
+ 

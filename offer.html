@@ -26,26 +26,27 @@
         </div>
          </nav>
     
-
     <section class="Post-request">
-     <form>
+     <form >
 
         <div>
             <h2>Post Job Request</h2>
         </div>
 
+       
+            <div class="left">
         <div class="name">
-            <label>Child's Name:
+            <label>Child's Name: <br>
             <input type="text" >
             </label></div>
         
         <div class="age">
-            <label>Child's Age:
+            <label>Child's Age: <br>
             <input type="text" >
             </label> </div>
 
          <div class="service">
-                 <label>Type of service:
+                 <label>Type of service: <br>
                 <select class="services" >
                     <option selected>Choose an option</option>
                     <option>Toddler babysitting</option>
@@ -57,32 +58,36 @@
                     </select>
                  </label> </div>
 
-         <div class="duration">
-                <!-- <label>Duration:
-                 <input type="text" >
-                 <label>  -->
-                    <br>
-                   Date: <br> <input class="#" id="date" type="date" name="date" value="#"><br> </label> 
-                   <br>
-                  <!-- <label>Session Duration:<br></label>  -->
-                    <label>Sessin Duration (Start): <input class="#" type="time" name="time" value="#"> <br></label> 
-                    <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="time" value="#"><br> </label> 
-                  <br>
+                 <div class="duration">
+                    <label>Duration: <br>
+                     <input type="text" >
+                    </label></div>
+    
+                </div>
 
-                </label></div>
+                <div class="right">
+                 <label> 
+                   Date: <br> <input class="date" id="date" type="date" name="date" value="#"><br> </label> 
+                    <label>Sessin Duration (Start):<br><input class="#" type="time" name="time" value="#"> <br></label> 
+                    <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="time" value="#"><br> </label> 
+                  <br> 
+
+                </label>
+
+            <button id ="post" type="submit">Post Request</button>
+            <button id="cancel" type="reset">Cancel</button>
+
+            </div>
+        </div>
+     
                             <br>
 
 
 
-            <button id ="post" type="submit">Post Request</button>
-            <br>
-            <button id="cancel" type="reset">Cancel</button>
-
-
 
                             
-         </form>
-    </section>
+          </form>
+    </section> 
     <div class= "footer">
         <div class="col-1">
             <h3><b>ABOUT US</b></h3>
