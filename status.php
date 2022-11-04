@@ -53,7 +53,7 @@
                 $var1=$row[0];
                 $var2=(int)$var1;
                 $query1 = "SELECT * FROM bookings where sitterid ='$var1'";
-                //$query2=(String)
+                
                 $result1 = mysqli_query($conn, $query1);
                 if ($result1) {
                     if($row = mysqli_fetch_row($result1)){
