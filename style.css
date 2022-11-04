@@ -48,203 +48,10 @@
         color:burlywood;
       }
     
-    .content{
-        margin-top: 15%;
-        margin-left: 10%;
-    }
     
-      .content h1{
-        font-size: 50px;
-        font-weight: 600;
-        margin-top:24px;
-        margin-bottom: 15px;
-        color:#75552b
-      }
-    
-      .content p{
-        font-size: 25px;
-        color:rgb(152, 122, 96);
-        padding: 10px;
-      }
-    
-    .content a{
-        display: inline-block;
-        background: #d2adb1;
-        border-radius: 6px;
-        box-sizing: border-box;
-        padding : 10px 25px;
-        text-decoration : none;
-        color: #fff;
-       
-      }
-      .content a:hover{
-        color: #75552b;
-      }
-    
-      .contact-us{
-        /*font-family: 'Poppins', sans-serif;*/
-        box-sizing: border-box;
-        margin-top: 500px;
-        position: relative;
-        min-height: 100vh;
-        padding: 50px 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-size: cover;
-      }
-    
-      .contact-us .contact{
-    
-        max-width: 800px;
-        text-align: center ;
-        margin-right: 400px
-    
-    
-      }
-    
-    .contact-us .contact h2{
-        font-size: 36px;
-        font-weight:500;
-        color: #4a361b
-     
-      }
-    
-      .container2{
-    
-        width:100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-    
-      }
-    
-      .container2 .contactInfo{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    
-      }
-    
-      .container2 .contactInfo .box{
-    
-        position: relative;
-        padding: 20px 0;
-        display: flex;
-      }
-    
-      .container2 .contactInfo .box .icon{
-    
-        min-width: 60px;
-        height: 60px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        font-size: 22px;
-    
-    
-      }
-    
-    
-      .container2 .contactInfo .box .text{
-    
-        display: flex;
-        margin-left: 20px;
-        font-size: 16px;
-        color: #000;
-        flex-direction: column;
-        font-weight: 300;
-      }
-    
-      .container2 .contactInfo .box .text h3{
-    
-        font-weight: 500;
-        color:#75552b
-      }
-    
-      .contactForm{
-    
-        width: 40%;
-        padding: 40px;
-        background: #edeae2;
-    
-      }
-    
-      .contactForm h2{
-    
-        font-size: 30px;
-        color: #333;
-        font-weight: 500;
-    
-      }
-    
-      .contactForm .inputBox{
-    
-        position: relative;
-        width: 100%;
-        margin-top: 10px;
-      }
-    
-      .contactForm .inputBox input,
-      .contactForm .inputBox textarea{
-    
-        width: 100%;
-        padding: 5px 0;
-        font-size: 16px;
-        margin: 10px 0;
-        border: none;
-        border-bottom: 2px solid #333;
-        outline: none;
-        resize: none;
-    
-      }
-    
-      .contactForm .inputBox .span{
-    
-        position: absolute;
-        left: 0;
-        padding: 5px 0;
-        font-size: 16px;
-        margin: 10px 0;
-        pointer-events: none;
-        transition: 0.5s;
-        color:#666;
-        
-    
-      }
-    
-      .contactForm .inputBox input:focus ~ span,
-      .contactForm .inputBox input:valid ~ span,
-      
-      .contactForm .inputBox textarea:focus ~ span,
-      .contactForm .inputBox textarea:valid ~ span{
-    
-        color: #d2adb1;
-        font-size: 12px;
-        transform: translateY(-20px);
-    
-      }
-    
-      .contactForm .inputBox input[type ="submit"]{
-    
-        width: 100px;
-        background: #d2adb1;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        font-size: 18px;
-    
-      }
-    
-
-
-
+    /* ======================================================================================== */
       .footer div{
-        margin: 20px;
+        margin: 0 auto;
         text-align: center;
         background: #d7b593;
         }
@@ -257,33 +64,29 @@
         .footer div h3{
         
           font-weight: 300;
-          margin-bottom: 30px;
+          margin-bottom: none;
           letter-spacing: 1px;
         }
         
-         
+        
         
         .col-1 p{
           display: block;
           text-decoration: none;
           color:#75552b;
-          margin-bottom: 10px;
+          margin-bottom: none;
         }
         
-       /* .col-1 a:hover{
-          color: #fff;
-        }*/
-        
-       /*==========================================================================*/ 
+      /*==========================================================================*/ 
         form input{
-           width: 300px;
-           height: 45px;
-           text-align: center;
-            border-radius: 4px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            outline: none;
-             border: none; 
+          width: 300px;
+          height: 45px;
+          text-align: center;
+          border-radius: 4px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          outline: none;
+          border: none; 
         }
         
         
@@ -304,15 +107,15 @@
           margin-top: 30px;
         }
         
-         .social-icons i{
+        .social-icons i{
           font-size: 22px;
           margin: 10px;
           cursor: pointer;
-         }
+        }
         
-         .col-3 a{
+        .col-3 a{
           color:#75552b;
-         }
+        }
         
         
         
@@ -321,43 +124,18 @@
         }
       
         .footer{
-           margin-top: 400px;
-         width:100%;
-          padding: 100px 15%;  
+          margin-top: none;
+          width:100%;
+          padding: 50px 5%;  
           background: #d7b593;
           color:#75552b;
-          /* display: flex;
-        */
-        } 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+        }
       
       
         *{
           margin: 0px;
           padding: 0px;
-           font-family: poppins;
+          font-family: poppins;
           box-sizing: border-box;
       }
 
@@ -369,7 +147,7 @@
   *{
     margin: 0px;
     padding: 0px;
-     font-family: poppins;
+    font-family: poppins;
     box-sizing: border-box;
 }
 a{
@@ -380,32 +158,29 @@ a{
 .sign-in-form{
   box-sizing: border-box;
   border-radius: 20px;
-    margin-top: 150px;
-    margin-left: 500px;
-    margin-bottom: 500px;
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
-    width: 35%;
-    height:40%;
-    background: #d7b593;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-
+  margin-block-start: 50px;
+  margin : 0 auto;
+  margin-block-end: 50px;
+  position: relative;
+  min-block-size: 50vh;
+  padding: 50px 100px;
+  inline-size: 60%;
+  background: #d7b593;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  background-size: cover;
+  /* text-align: center; */
 }
 
 .sign-in-form h2{
   position: relative;
-  margin-bottom: 70px;
+  margin-block-end: 70px;
   text-align:center;
-  font-weight: 600;
-  text-align: center;
+  font-weight:500;
   color:#75552b;
 }
-
 
 
 .sign-in-form button{
@@ -417,19 +192,13 @@ a{
   cursor: pointer;
   text-align:center;
   align-items: center;
-margin-left: 150px;
+  /* margin : 0 auto; */
+  margin-block-start: 10px;
+  margin-left: 150px;
+
 }
-
-
 .sign-in-form button:hover{
-
-
 color:burlywood;
-
-
-
-
-
 }
 
 
@@ -439,25 +208,26 @@ color:burlywood;
   width: 400px;
   height: 45px;
   text-align: start;
-   border-radius: 4px;
-   margin-top: 10px;
-   margin-bottom: 20px;
-   outline: none;
-    border: none;
- }
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  
+}
 
-   
-    .sign-in-form input[type=checkbox]{
-transform: scale(1);
-border:0.1em solid #000;
-border-radius:0.2em;
-width: 1em;
-height:1em;
-margin-left: 10px;
-text-align:center;
-align-items: center;
-margin-left: 125px;
-    }
+  .sign-in-form input[type=checkbox]{
+  transform: scale(1);
+  border:0.1em solid #000;
+  border-radius:0.2em;
+  width: 1em;
+  height:1em;
+  text-align:center;
+  align-items: center;
+  margin:0 auto;
+  margin-left: 130px;
+
+  }
 
 
 
@@ -465,43 +235,37 @@ margin-left: 125px;
   .Registeration{
     box-sizing: border-box;
     border-radius: 20px;
-      margin-top: 150px;
-      margin-left: 500px;
-      margin-bottom: 500px;
-      position: relative;
-      min-height: 100vh;
-      padding: 50px 100px;
-      width: 35%;
-      height:40%;
-      background: #d7b593;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-size: cover;
-            
+    margin-block-start: 50px;
+    margin : 0 auto;
+    margin-block-end: 50px;
+    position: relative;
+    min-block-size: 50vh;
+    display: block;
+    padding: 50px 50px ;
+    inline-size: 80%;
+    background: #d7b593;
+    background-size: cover;
   }
   
   .Registeration h2{
     position: relative;
-    margin-bottom: 70px;
-    text-align: center;
-
-    font-weight: 600;
-    text-align: center;
+    margin-block-end: 30px;
+    text-align:center;
+    font-weight:500;
     color:#75552b;
   }
   
-  
-  
   .Registeration button{
     background-color:#75552b; 
-    border: none;  
-    position: relative;
-    padding: 10px 30px;
-    margin-left: 130px;
-
-    cursor: pointer;
+  border: none;  
+  position: relative;
+  padding: 10px 30px;
+  text-align:center;
+  cursor: pointer;
+  text-align:center;
+  align-items: center;
+  margin-block-start: 10px;
+  margin : 0 auto;
   }
   
   .Registeration button:hover{
@@ -510,23 +274,59 @@ margin-left: 125px;
   
   
   .Registeration input{
+    display: inline;
+    text-align: start;
     font-size: medium;
     text-indent: 7px ;
-    width: 400px;
-    height: 45px;
-    text-align: start;
-     border-radius: 4px;
-     margin-top: 10px;
-     margin-bottom: 20px;
-     outline: none;
-      border: none; }
+    inline-size: 300px;
+    block-size: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none; 
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    padding: 10px ;
+  } 
   
-     
-      .Registeration input[type=checkbox],input[type=radio]{
+  .left{ 
+    float: left; 
+    display: inline;
+    width: 50%; 
+    padding: 60px;
+    margin-top: 00px;
+    margin-bottom: 0px; 
+  } 
+
+  .right{ 
+    float: right; 
+    width: 50%; 
+    display: inline;
+    margin-top: 0px; 
+    padding: 60px;
+    margin-bottom: 0px; 
+
+  }
+  
+  .Registeration input[type=radio]{
+  display: inline;
   transform: scale(1);
   border:0.1em solid #000;
   border-radius:0.2em;
-  width: 1em;
-  height:1em;
-  margin-left: 10px;
-      }
+  inline-size: 1em;
+  block-size:1em;
+  margin-inline-start: 10px;
+  }
+  .Registeration input[type=checkbox]{
+  display: inline;
+  transform: scale(1);
+  border:0.1em solid #000;
+  border-radius:0.2em;
+  inline-size: 1em;
+  block-size:1em;
+  }
+  .pro{
+    width: 80px;
+    height: 70px;
+  }
