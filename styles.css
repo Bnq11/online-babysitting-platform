@@ -18,16 +18,16 @@ width: 100%;
 
 
   }
-
   .logo {
     position: relative;
     height: 180px;
     right: 5px;
-    left: 5px;
+    left: 40px;
     bottom: 37px;
     width: 180px;
     float:left;
   }
+
 
 
   nav ul{
@@ -86,26 +86,26 @@ padding:12px;
   }
 
   
-
 /*====================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .wrapper .sidebar{
 	background:#d7b593;
-	position: absolute;
+	position:absolute;
 	top: 0;
 	left: 0;
-	width: 225px;
-	height: 100%;
+	width: 275px;
+	height: 140%;
 	padding: 20px 0;
 	transition: all 0.5s ease;
 }
-.wrapper .sidebar .profile{
+.wrapper .sidebar .profile1{
 	margin-bottom: 30px;
 	text-align: center;
+	color:#75552b;
 
 }
-.wrapper .sidebar .profile img{
+.wrapper .sidebar .profile1 img{
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -242,7 +242,7 @@ body.active .wrapper .section{
   }
 
   .footer{
-    margin-top: 250px;
+    margin-top: 100px;
     width:100%;
     padding: 50px 5%;  
     background: #d7b593;
@@ -396,12 +396,14 @@ a{
     margin :  auto; 
     margin-block-end: 30px; 
     position: relative; 
-    min-block-size: 40vh; 
+    min-block-size: 10vh; 
     display: block; 
-    padding: 50px 50px ; 
-    inline-size: 80%; 
+    padding: 20px 0px ; 
+    inline-size: 70%; 
     background: #d7b593; 
     background-size: cover;
+    margin-left: 320px;
+    margin-right: 20px;
 } 
 
 
@@ -461,7 +463,7 @@ a{
 
 .Post-request .services{
   position: relative;
-  width: 400px;
+  width: 300px;
   height: 45px;
    border-radius: 4px;
    text-align:center; 
@@ -478,7 +480,7 @@ a{
 
 .Post-request #post{
   display: inline;
-  margin-left: 385px;
+  margin-left: 300px;
 
 }
 
@@ -493,7 +495,7 @@ color: burlywood;
 .Post-request input{
   font-size: medium;
   text-indent: 7px ;
-  width: 400px;
+  width: 300px;
   height: 45px;
   text-align: start;
    border-radius: 4px;
