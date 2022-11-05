@@ -25,9 +25,10 @@ session_start();
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <style type="text/css">
-            .currentJob h1{
+            .currentJob h1 ,.prevJob h1{
                 margin-left:130px;
             }
+            
             </style>
 
     </head>
@@ -54,30 +55,102 @@ session_start();
               // $x=$_POST["username"];//
                $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
                $result3 = mysqli_query($conn, $sql);
-
+               $y = 0; 
         if($row = mysqli_fetch_row($result3))
         {
             $var1=$row[0];
             $var2=(int)$var1;
             $query1 = "SELECT * FROM bookings where sitterid ='$var2'";
             $result1 = mysqli_query($conn, $query1);
+            
+            /*$queryp = "SELECT parentid FROM bookings where sitterid ='$var2'";
+            $resultp = mysqli_query($conn, $queryp);
+            $rowp= mysqli_fetch_row($resultp);*/
+            
+            
 
             if ($result1) {
 
                 if($row = mysqli_fetch_row($result1)){
-                 echo "<table><caption> My current jobs: </caption>";
-                 echo "<thead><tr><th > Offer</th><th> Status</th></tr></thead><tbody>";
-                 echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>'; 
+                    $day=date("Y-m-d H:i:s",time());
+                    $start=strtotime($row[3]);
+                    $today=strtotime($day);
+
+                    //print $today;
+                   /* $year=(int) substr($row[3],0,4);
+                    $month= (int) substr($row[3],5,2);
+                    $day= (int) substr($row[3],8,2);
+                    $hour= (int) substr($row[3],11,2);
+                    $mint= (int) substr($row[3],14,2);
+                    //$second= (int) substr($row[3],17,2);
+
+                    $yearT=(int) substr($today,0,4);
+                    $monthT=(int) substr($today,5,2);
+                    $dayT=(int) substr($today,8,2);
+                    $hourT=(int) substr($today,11,2);
+                    $mintT=(int) substr($today,14,2);
+                    //$secondT=(int) substr($today,17,2);*/
+
+                    
+
+                    /*if($year-$yearT>=0 && $month-$monthT>=0){
+                    if($day-$dayT>=0){
+                    if($hourT-$hourT>=0){
+                    if($mint-$mintT>=0){
+                   // print "next";*/
+                   if($start-$today >=0){
+                    $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
+                    $resultpa = mysqli_query($conn, $querypa);
+                    $rowpa= mysqli_fetch_row($resultpa);
+                    $GLOBALS['y']++;
+                    echo "<table><caption> My current jobs: </caption>";
+                    echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; 
+                    echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>';
+                 } }
                 }
-                else echo "<br><br><br><br><h1>There is no current jobs</h1>";
+                
 
                 while ($row = mysqli_fetch_row($result1)) {
-                    echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>';    
+                    $day=date("Y-m-d H:i:s",time());
+                    $start=strtotime($row[3]);
+                    $today=strtotime($day);
+                    
+                    //print $today;
+                    /* $year=(int) substr($row[3],0,4);
+                    $month= (int) substr($row[3],5,2);
+                    $day= (int) substr($row[3],8,2);
+                    $hour= (int) substr($row[3],11,2);
+                    $mint= (int) substr($row[3],14,2);
+                    //$second= (int) substr($row[3],17,2);
+
+                    $yearT=(int) substr($today,0,4);
+                    $monthT=(int) substr($today,5,2);
+                    $dayT=(int) substr($today,8,2);
+                    $hourT=(int) substr($today,11,2);
+                    $mintT=(int) substr($today,14,2);
+                    //$secondT=(int) substr($today,17,2);*/
+
+                    /*if($year-$yearT>=0 && $month-$monthT>=0){
+                    if($day-$dayT>=0){
+                    if($hourT-$hourT>=0){
+                    if($mint-$mintT>=0){
+                   // print "next";*/
+                   if($start-$today >=0){
+                    $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
+                    $resultpa = mysqli_query($conn, $querypa);
+                    $rowpa= mysqli_fetch_row($resultpa);
+                    if($GLOBALS['y']==0){
+                    echo "<table><caption> My current jobs: </caption>";
+                    echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; }
+                    echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>'; }
+                    $GLOBALS['y']++;
                 }
+                if($GLOBALS['y']>0)
+                {
                 echo"</tbody></table>";
+                }else echo "<br><br><br><br><h1>There is no current jobs</h1>";
             }
-        }
-        else{
+           else{
             if($row = mysqli_fetch_row($result3)<=0) echo "<br><br><br><br><h1>There is no current jobs</h1>";
             else 
              echo mysqli_error();
@@ -86,7 +159,7 @@ session_start();
 </div>
 
 <div class="prevJob">
-    <table>
+   <!-- <table>
         <caption> My previous jobs: </caption>
         <thead>
             <tr>
@@ -108,7 +181,115 @@ session_start();
                 <td>Accepted</td>
             </tr> 
         </tbody>
-    </table>
+    </table>-->
+
+    <?php       
+              //  $_SESSION["emailb"]=$_POST["username"];
+               $x=$_SESSION["emailb"];//
+              // $x=$_POST["username"];//
+               $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
+               $result3 = mysqli_query($conn, $sql);
+               $y = 0; 
+        if($row = mysqli_fetch_row($result3))
+        {
+            $var1=$row[0];
+            $var2=(int)$var1;
+            $query1 = "SELECT * FROM bookings where sitterid ='$var2'";
+            $result1 = mysqli_query($conn, $query1);
+            
+            /*$queryp = "SELECT parentid FROM bookings where sitterid ='$var2'";
+            $resultp = mysqli_query($conn, $queryp);
+            $rowp= mysqli_fetch_row($resultp);*/
+            
+            
+
+            if ($result1) {
+
+                if($row = mysqli_fetch_row($result1)){
+                    $day=date("Y-m-d H:i:s",time());
+                    $start=strtotime($row[3]);
+                    $today=strtotime($day);
+
+                    //print $today;
+                   /* $year=(int) substr($row[3],0,4);
+                    $month= (int) substr($row[3],5,2);
+                    $day= (int) substr($row[3],8,2);
+                    $hour= (int) substr($row[3],11,2);
+                    $mint= (int) substr($row[3],14,2);
+                    //$second= (int) substr($row[3],17,2);
+
+                    $yearT=(int) substr($today,0,4);
+                    $monthT=(int) substr($today,5,2);
+                    $dayT=(int) substr($today,8,2);
+                    $hourT=(int) substr($today,11,2);
+                    $mintT=(int) substr($today,14,2);
+                    //$secondT=(int) substr($today,17,2);*/
+
+                    
+
+                    /*if($year-$yearT>=0 && $month-$monthT>=0){
+                    if($day-$dayT>=0){
+                    if($hourT-$hourT>=0){
+                    if($mint-$mintT>=0){
+                   // print "next";*/
+                   if($start-$today < 0){
+                    $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
+                    $resultpa = mysqli_query($conn, $querypa);
+                    $rowpa= mysqli_fetch_row($resultpa);
+                    $GLOBALS['y']++;
+                    echo "<table><caption> My previous jobs: </caption>";
+                    echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; 
+                    echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>';
+                 } }
+                }
+                
+
+                while ($row = mysqli_fetch_row($result1)) {
+                    $day=date("Y-m-d H:i:s",time());
+                    $start=strtotime($row[3]);
+                    $today=strtotime($day);
+                    
+                    //print $today;
+                    /* $year=(int) substr($row[3],0,4);
+                    $month= (int) substr($row[3],5,2);
+                    $day= (int) substr($row[3],8,2);
+                    $hour= (int) substr($row[3],11,2);
+                    $mint= (int) substr($row[3],14,2);
+                    //$second= (int) substr($row[3],17,2);
+
+                    $yearT=(int) substr($today,0,4);
+                    $monthT=(int) substr($today,5,2);
+                    $dayT=(int) substr($today,8,2);
+                    $hourT=(int) substr($today,11,2);
+                    $mintT=(int) substr($today,14,2);
+                    //$secondT=(int) substr($today,17,2);*/
+
+                    /*if($year-$yearT>=0 && $month-$monthT>=0){
+                    if($day-$dayT>=0){
+                    if($hourT-$hourT>=0){
+                    if($mint-$mintT>=0){
+                   // print "next";*/
+                   if($start-$today < 0){
+                    $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
+                    $resultpa = mysqli_query($conn, $querypa);
+                    $rowpa= mysqli_fetch_row($resultpa);
+                    if($GLOBALS['y']==0){
+                    echo "<table><caption> My previous jobs: </caption>";
+                    echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; }
+                    echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>'; }
+                    $GLOBALS['y']++;
+                }
+                if($GLOBALS['y']>0)
+                {
+                echo"</tbody></table>";
+                }else echo "<br><br><br><br><h1>There is no previous jobs</h1>";
+            }
+           else{
+            if($row = mysqli_fetch_row($result3)<=0) echo "<br><br><br><br><h1>There is no previous jobs</h1>";
+            else 
+             echo mysqli_error();
+            }
+            ?>
     </div>
 
 
