@@ -186,7 +186,7 @@ form button{
 
 
 .footer div{
-  margin: 20px;
+  margin: 0 auto;
   text-align: center;
   background: #d7b593;
   }
@@ -199,33 +199,29 @@ form button{
   .footer div h3{
   
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: none;
     letter-spacing: 1px;
   }
   
-   
+  
   
   .col-1 p{
     display: block;
     text-decoration: none;
     color:#75552b;
-    margin-bottom: 10px;
+    margin-bottom: none;
   }
   
- /* .col-1 a:hover{
-    color: #fff;
-  }*/
-  
- /*==========================================================================*/ 
+/*==========================================================================*/ 
   form input{
-     width: 300px;
-     height: 45px;
-     text-align: center;
-      border-radius: 4px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      outline: none;
-       border: none; 
+    width: 300px;
+    height: 45px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none; 
   }
   
   
@@ -246,15 +242,15 @@ form button{
     margin-top: 30px;
   }
   
-   .social-icons i{
+  .social-icons i{
     font-size: 22px;
     margin: 10px;
     cursor: pointer;
-   }
+  }
   
-   .col-3 a{
+  .col-3 a{
     color:#75552b;
-   }
+  }
   
   
   
@@ -263,14 +259,20 @@ form button{
   }
 
   .footer{
-     margin-top: 400px;
-   width:100%;
-    padding: 100px 15%;  
+    margin-top: 250px;
+    width:100%;
+    padding: 50px 5%;  
     background: #d7b593;
     color:#75552b;
-    /* display: flex;
-  */
-  } 
+  }
+
+
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
 
 
 
@@ -502,11 +504,11 @@ a{
   width: 400px;
   height: 45px;
    border-radius: 4px;
-    text-align:center; 
-    margin-top: 10px;
+   text-align:center; 
+   margin-top: 10px;
    margin-bottom: 20px;
    outline: none;
-    border: none; 
+   border: none; 
 }
 
 .Post-request #cancel{
@@ -519,7 +521,6 @@ a{
   margin-left: 385px;
 
 }
-
 
 #post:hover{
 color: burlywood;
