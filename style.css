@@ -124,7 +124,7 @@
         }
       
         .footer{
-          margin-top: none;
+          margin-top: 250px;
           width:100%;
           padding: 50px 5%;  
           background: #d7b593;
@@ -140,8 +140,6 @@
       }
 
 /*===========================================================*/
-
-
 
 
   *{
@@ -229,8 +227,6 @@ color:burlywood;
 
   }
 
-
-
   /*====================================================================================================*/
   .Registeration{
     box-sizing: border-box;
@@ -274,7 +270,7 @@ color:burlywood;
   
   
   .Registeration input{
-    display: inline;
+    /* display: inline;
     text-align: start;
     font-size: medium;
     text-indent: 7px ;
@@ -282,7 +278,17 @@ color:burlywood;
     block-size: 40px;
     border-radius: 4px;
     outline: none;
-    border: none; 
+    border: none;  */
+    font-size: medium;
+    text-indent: 7px ;
+    width: 400px;
+    height: 45px;
+    text-align: start;
+     border-radius: 4px;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     outline: none;
+      border: none; 
   }
   .container {
     border-radius: 5px;
@@ -295,18 +301,16 @@ color:burlywood;
     display: inline;
     width: 50%; 
     padding: 60px;
-    margin-top: 00px;
-    margin-bottom: 0px; 
+    margin-top: 20px; 
+    
   } 
 
   .right{ 
     float: right; 
     width: 50%; 
     display: inline;
-    margin-top: 0px; 
+    margin-top: 20px; 
     padding: 60px;
-    margin-bottom: 0px; 
-
   }
   
   .Registeration input[type=radio]{
