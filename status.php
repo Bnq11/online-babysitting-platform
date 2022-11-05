@@ -10,6 +10,9 @@
     if(!mysqli_select_db($conn, DB_NAME))
         die("Could not open the ".DB_NAME." database.");
 ?>
+<?php
+session_start();
+?>
 <html>
 <!--babysitter status-->
     <head>
@@ -46,37 +49,39 @@
 
 <div class="currentJob">
     <?php       
-                
-                $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='amal@ht.mail'";
-                $result3 = mysqli_query($conn, $sql);
-                if($row = mysqli_fetch_row($result3))
-                $var1=$row[0];
-                $var2=(int)$var1;
-                $query1 = "SELECT * FROM bookings where sitterid ='$var1'";
-                
-                $result1 = mysqli_query($conn, $query1);
-                if ($result1) {
-                    if($row = mysqli_fetch_row($result1)){
-                    echo "<table>
-                    <caption> My current jobs: </caption>";
-                    echo
-                "<thead>
-                    <tr>
-                        <th > Offer</th>
-                        <th> Status</th>
-                    </tr>
-                </thead><tbody>";
-                echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>'; 
-                }else echo "<br><br><br><br><h1>There is no current jobs</h1>";
-                    while ($row = mysqli_fetch_row($result1)) {
-                        echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>'; 
-                        
-                    }
-                echo"</tbody> 
-                </table>";
+              //  $_SESSION["emailb"]=$_POST["username"];
+               $x=$_SESSION["emailb"];//
+              // $x=$_POST["username"];//
+               $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
+               $result3 = mysqli_query($conn, $sql);
+
+        if($row = mysqli_fetch_row($result3))
+        {
+            $var1=$row[0];
+            $var2=(int)$var1;
+            $query1 = "SELECT * FROM bookings where sitterid ='$var2'";
+            $result1 = mysqli_query($conn, $query1);
+
+            if ($result1) {
+
+                if($row = mysqli_fetch_row($result1)){
+                 echo "<table><caption> My current jobs: </caption>";
+                 echo "<thead><tr><th > Offer</th><th> Status</th></tr></thead><tbody>";
+                 echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>'; 
                 }
-                else 
-                    echo mysqli_error();
+                else echo "<br><br><br><br><h1>There is no current jobs</h1>";
+
+                while ($row = mysqli_fetch_row($result1)) {
+                    echo '<tr> <td>'.$row[0].'</td> <td>'.$row[6].'</td> </tr>';    
+                }
+                echo"</tbody></table>";
+            }
+        }
+        else{
+            if($row = mysqli_fetch_row($result3)<=0) echo "<br><br><br><br><h1>There is no current jobs</h1>";
+            else 
+             echo mysqli_error();
+            }
             ?>
 </div>
 
@@ -106,6 +111,8 @@
     </table>
     </div>
 
+
+    
     <div class= "footer">
         <div class="col-1">
             <h3><b>ABOUT US</b></h3>
