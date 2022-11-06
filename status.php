@@ -179,7 +179,7 @@ session_start();
                                 $GLOBALS['y']++;
                                 echo "<table><caption> My current jobs: </caption>";
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; 
-                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>';
+                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>';
                              } }
                             }
                             
@@ -216,8 +216,8 @@ session_start();
                                 if($GLOBALS['y']==0){
                                 echo "<table><caption> My current jobs: </caption>";
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; }
-                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>'; }
-                                $GLOBALS['y']++;
+                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>'; 
+                                $GLOBALS['y']++;}
                             }
                             if($GLOBALS['y']>0)
                             {
@@ -313,10 +313,8 @@ session_start();
                                 $GLOBALS['y']++;
                                 echo "<table><caption> My previous jobs: </caption>";
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; 
-                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>';
-                             } }
-                            }
-                            
+                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>';
+                             } }}
             
                             while ($row = mysqli_fetch_row($result1)) {
                                 $day=date("Y-m-d H:i:s",time());
@@ -350,8 +348,8 @@ session_start();
                                 if($GLOBALS['y']==0){
                                 echo "<table><caption> My previous jobs: </caption>";
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; }
-                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td>'.$rowpa[0].'</td><td>'.$row[6].'</td> </tr>'; }
-                                $GLOBALS['y']++;
+                                echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>'; 
+                                $GLOBALS['y']++;}
                             }
                             if($GLOBALS['y']>0)
                             {
