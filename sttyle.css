@@ -1,5 +1,20 @@
 
 
+.left{ 
+  float: left; 
+  display: inline;
+  width: 50%; 
+  padding: 60px;
+  margin-top: 20px; 
+} 
+ 
+.right{ 
+  float: right; 
+  width: 50%; 
+  display: inline;
+  margin-top: 20px; 
+  padding: 60px;
+}
 
 .profile{
     
@@ -7,20 +22,21 @@
 
   box-sizing: border-box;
   border-radius: 50px;
-    margin-top: 150px;
-    margin-left: 440px;
-    margin-bottom: 500px;
+    margin-top: 20px;
+    margin-left: 320px;
+    /* margin-bottom: 500px; */
     position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
-    width: 40%;
-    height:40%;
+    padding: 50px 50px;
+    width: 70%;
+    /* height:40%; */
     background: #d7b593;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     flex-direction: column;
     background-size: cover;
+    display: block;
     /* text-align: left; */
 
     
@@ -30,9 +46,9 @@
 
 .profile input{
 
-
+width: 250px;
   text-align: left;
-  
+  padding: 0px;
   }
 
 
@@ -45,12 +61,12 @@
    /* margin-top: -10px; */
 }
 .in{
-   margin: 10px;
-   padding-top: 10px;
+   margin: 0px;
+   padding-top: 0px;
 }
 h1{ 
   position: relative;
-  margin-bottom: 50px;
+  /* margin-bottom: 10px; */
   
   font-weight: 600;
   text-align: center;
@@ -88,7 +104,7 @@ input{
 
   font-size: medium;
     text-indent: 7px ;
-    width: 400px;
+    width: 200px;
     height: 45px;
     text-align: start;
     border-radius: 4px;
@@ -371,7 +387,7 @@ list-style-type:none;
   }
 
   .footer{
-   /* margin-top: 250px; */
+    margin-top: 100px;
     width:100%;
     padding: 50px 5%;  
     background: #d7b593;
@@ -426,7 +442,7 @@ text-decoration: none;
 	top: 0;
 	left: 0;
 	width: 275px;
-	height: 150%;
+	height: 170%;
 	padding: 20px 0;
 	transition: all 0.5s ease;
 }

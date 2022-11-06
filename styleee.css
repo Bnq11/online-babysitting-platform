@@ -61,7 +61,7 @@ padding:12px;
 
 
   .footer div{
-    margin: 20px;
+    margin: 0 auto;
     text-align: center;
     background: #d7b593;
     }
@@ -74,33 +74,29 @@ padding:12px;
     .footer div h3{
     
       font-weight: 300;
-      margin-bottom: 30px;
+      margin-bottom: none;
       letter-spacing: 1px;
     }
     
-     
+    
     
     .col-1 p{
       display: block;
       text-decoration: none;
       color:#75552b;
-      margin-bottom: 10px;
+      margin-bottom: none;
     }
     
-   /* .col-1 a:hover{
-      color: #fff;
-    }*/
-    
-   /*==========================================================================*/ 
+  /*==========================================================================*/ 
     form input{
-       width: 300px;
-       height: 45px;
-       text-align: center;
-        border-radius: 4px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        outline: none;
-         border: none; 
+      width: 300px;
+      height: 45px;
+      text-align: center;
+      border-radius: 4px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      outline: none;
+      border: none; 
     }
     
     
@@ -121,16 +117,15 @@ padding:12px;
       margin-top: 30px;
     }
     
-     .social-icons i{
+    .social-icons i{
       font-size: 22px;
       margin: 10px;
       cursor: pointer;
-     }
+    }
     
-     .col-3 a{
+    .col-3 a{
       color:#75552b;
-      text-decoration: none;
-     }
+    }
     
     
     
@@ -139,18 +134,31 @@ padding:12px;
     }
   
     .footer{
-       margin-top: 400px;
-     width:100%;
-      padding: 100px 15%;  
+      margin-top: 100px;
+      width:100%;
+      padding: 50px 5%;  
       background: #d7b593;
       color:#75552b;
-      /* display: flex;
-    */
-    } 
+    }
   
   
+    *{
+      margin: 0px;
+      padding: 0px;
+      font-family: poppins;
+      box-sizing: border-box;
+  }
   
   
+    *{
+      margin: 0px;
+      padding: 0px;
+       font-family: poppins;
+      box-sizing: border-box;
+  }
+  a{
+      text-decoration: none;
+  }
   
    /*=========================================*/
   
@@ -162,10 +170,10 @@ padding:12px;
   .set{
     border:1px soild rgba(255, 255, 255, 0.578);
     background-color: rgba(255, 255, 255, 0.578);
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 100px;
-    padding: 80px;
+    margin-left: 320px;
+    margin-right: 50px;
+    margin-top: 75px;
+    padding: 50px;
     border-radius: 20px;
     opacity: 0.8;
   }
@@ -303,4 +311,85 @@ margin-left: 400px;
   nav:hover{ color:burlywood;}
 */
 	
+/*====================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.wrapper .sidebar{
+	background:#d7b593;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 275px;
+	height: 130%;
+	padding: 20px 0;
+	transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile1{
+	margin-bottom: 30px;
+	text-align: center;
+	color:#75552b;
+
+}
+.wrapper .sidebar .profile1 img{
+	display: block;
+	width: 100px;
+	height: 100px;
+    border-radius: 50%;
+	margin: 0 auto;
+}
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid white;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color:#75552b;
+	background:white;
+    border-right: 2px solid white;
+}
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #75552b;
+}
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+.wrapper .section .top_navbar{
+	background: #75552b;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+.wrapper .section .top_navbar .hamburger a:hover{
+	color: #d2adb1;
+}
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+  /*==========================================================================*/
 	
