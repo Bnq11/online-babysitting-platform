@@ -8,8 +8,9 @@ $start = $_POST['stime'];
 $end = $_POST['etime'];
 
 $x=$date;// Date
-$durationSTart=$start;//start
-$durationEND=$end;//end
+$time_in_24_hour_format  = date("H:i:s", strtotime("01:30 PM"));
+$durationSTart= date("H:i:s", strtotime($start));//start
+$durationEND=date("H:i:s", strtotime($end));//end
 
 $y= $x." ".$durationSTart;
 $z=$x." ".$durationEND;
@@ -29,8 +30,8 @@ $parentid = 1;//"SELECT parentID FROM parent WHERE  parentemail='$x'";
                     //$var1=$row[0];
                    // $var2=(int)$var1;
 
-$sql = "INSERT INTO bookings"."( childName , childAge , service, Date , durationSTART , durationEND , parentID)". 
-    "VALUES ('$name' , '$age' , '$service' , '$date' , '$start' , '$end' , '$parentid' , '$sitterid')";
+$sql = "INSERT INTO bookings"."( childName , childAge , service,durationSTART , durationEND , sitterid, parentid)". 
+    "VALUES ('$name' , '$age' , '$service' , '$start' , '$end' , '$sitterid' , '$parentid')";
     if( !($result = mysqli_query($conn , $sql))){
         print ("<p> Could not post request!</p>");
         die("Failed");
