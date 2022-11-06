@@ -20,6 +20,14 @@ session_start();
 </head>
 <body>
 
+<script>
+            window.addEventListener("load", setInterval);
+            setInterval(checkRequest, 1000);
+            function checkRequest(){
+                document.getElementById("Post-request").innerHTML =<?php  checkrequest($conn) ?>;
+            }
+        </script>
+
 <div class="wrapper">
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
@@ -113,13 +121,27 @@ session_start();
     else{
         while($row = mysqli_fetch_array($result)){ 
             $childname = $row['childName'];
-            $childage = $row['childAge'];                                   
-            $rDate = strtotime($row['Date']);
+            $childage = $row['childAge'];
+
+            $y= $row[3];
+            $z=$row[4];
+            
+            $dateS=date_create($y);
+            $start= date_format($dateS,"h:ia");
+            
+            $dateE=date_create($z);
+            $end= date_format($dateE,"h:ia");
+            
+            $date=date_format($dateS,"Y/m/d");
+        
             $rtype = $row['Service'];
             $sduration = $row['durationSTART'];
             $eduration = $row['durationEND'];
             $rID = $row['parentID'];
           
+
+
+
 
 
 ?>
