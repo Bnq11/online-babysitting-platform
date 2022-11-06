@@ -18,16 +18,16 @@ width: 100%;
 
 
   }
-
   .logo {
     position: relative;
     height: 180px;
     right: 5px;
-    left: 5px;
+    left: 40px;
     bottom: 37px;
     width: 180px;
     float:left;
   }
+
 
 
   nav ul{
@@ -86,26 +86,26 @@ padding:12px;
   }
 
   
-
 /*====================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .wrapper .sidebar{
 	background:#d7b593;
-	position: absolute;
+	position:absolute;
 	top: 0;
 	left: 0;
-	width: 225px;
-	height: 100%;
+	width: 275px;
+	height: 140%;
 	padding: 20px 0;
 	transition: all 0.5s ease;
 }
-.wrapper .sidebar .profile{
+.wrapper .sidebar .profile1{
 	margin-bottom: 30px;
 	text-align: center;
+	color:#75552b;
 
 }
-.wrapper .sidebar .profile img{
+.wrapper .sidebar .profile1 img{
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -166,6 +166,87 @@ body.active .wrapper .section{
 	margin-left: 0;
 	width: 100%;
 }
+  /*==========================================================================*/
+  
+  .wrapper1 .sidebar1{
+    background:#d7b593;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 200%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+  }
+  .wrapper1 .sidebar1 .profile1{
+    margin-bottom: 30px;
+    text-align: center;
+    color:#75552b;
+
+  }
+  .wrapper1 .sidebar1 .profile1 img{
+    display: block;
+    width: 100px;
+    height: 100px;
+      border-radius: 50%;
+    margin: 0 auto;
+  }
+  .wrapper1 .sidebar1 ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid white;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+  }
+  .wrapper1 .sidebar1 ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+  }
+  .wrapper1 .sidebar1 ul li a:hover,
+  .wrapper1 .sidebar1 ul li a.active{
+    color:#75552b;
+    background:white;
+      border-right: 2px solid white;
+  }
+  .wrapper1 .sidebar1 ul li a:hover .icon,
+  .wrapper1 .sidebar1 ul li a.active .icon{
+    color: #75552b;
+  }
+  .wrapper1 .sidebar1 ul li a:hover:before,
+  .wrapper1 .sidebar1 ul li a.active:before{
+    display: block;
+  }
+  .wrapper1 .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+  }
+  .wrapper1 .section .top_navbar{
+    background: #75552b;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+   
+  }
+  .wrapper1 .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+  }
+  .wrapper1 .section .top_navbar .hamburger a:hover{
+    color: #d2adb1;
+  }
+  body.active .wrapper1 .sidebar{
+    left: -225px;
+  }
+  body.active .wrapper1 .section{
+    margin-left: 0;
+    width: 100%;
+  }
+    /*==========================================================================*/
+  
   /*==========================================================================*/
 
 .footer div{
@@ -242,7 +323,7 @@ body.active .wrapper .section{
   }
 
   .footer{
-    margin-top: 250px;
+    margin-top: 100px;
     width:100%;
     padding: 50px 5%;  
     background: #d7b593;
@@ -277,12 +358,13 @@ a{
 }
 .testimonial-heading{
     letter-spacing: 1px;
-    margin: 30px 0px;
+    margin: 0px 0px;
     padding: 10px 20px 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 300px;
 }
 .testimonial-heading h1{
     font-size: 2.2rem;
@@ -303,14 +385,19 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width:100%;
+    width:50%;
+    margin-left: 10px;
+    margin-left: 400px;
+
+
+    display: inline;
 }
 .testimonial-box{
     width:500px;
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     background-color: #ffffff;
     padding: 20px;
-    margin: 15px;
+    /* margin: 15px; */
     cursor: pointer;
 }
 .profile-img{
@@ -396,12 +483,14 @@ a{
     margin :  auto; 
     margin-block-end: 30px; 
     position: relative; 
-    min-block-size: 40vh; 
+    min-block-size: 10vh; 
     display: block; 
-    padding: 50px 50px ; 
-    inline-size: 80%; 
+    padding: 20px 0px ; 
+    inline-size: 70%; 
     background: #d7b593; 
     background-size: cover;
+    margin-left: 320px;
+    margin-right: 20px;
 } 
 
 
@@ -455,7 +544,7 @@ a{
 
 .Post-request  #save{
   margin-top: 0px;
-  margin-left: 455px;
+  margin-left: 350px;
 }
 
 #save:hover{
@@ -465,7 +554,7 @@ a{
 
 .Post-request .services{
   position: relative;
-  width: 400px;
+  width: 300px;
   height: 45px;
    border-radius: 4px;
    text-align:center; 
@@ -482,7 +571,7 @@ a{
 
 .Post-request #post{
   display: inline;
-  margin-left: 385px;
+  margin-left: 300px;
 
 }
 
@@ -497,7 +586,7 @@ color: burlywood;
 .Post-request input{
   font-size: medium;
   text-indent: 7px ;
-  width: 400px;
+  width: 300px;
   height: 45px;
   text-align: start;
    border-radius: 4px;

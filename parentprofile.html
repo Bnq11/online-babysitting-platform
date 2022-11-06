@@ -50,6 +50,81 @@
     </head>
     <body>
         
+
+        <div class="wrapper">
+            <!--Top Menu & Menu button-->
+            <!-- <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div> -->
+              <div class="sidebar">
+                  <div class="profile1">
+                    <br><br><br><br>
+                        <img src="157-1579943_no-profile-picture-round.png" alt="profile picture"> 
+                        <br>Parent name 
+                      <br>
+                  </div>
+                    <!--Menu item-->
+                    <ul>
+                        <li>
+                            <a href="menuparent.html" >
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="item">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bookingsparent.html#CurrentBookings" >
+                              <span class="icon"><i class="fas fa-folder"></i></i></span>
+                              <span class="item">Current bookings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="bookingsparent.html#PreviousBookings" >
+                              <span class="icon"><i class="fas fa-folder"></i></i></span>
+                              <span class="item">Previous bookings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="offer.html">
+                                <span class="icon"><i class="fas fa-folder"></i></i></span>
+                                <span class="item">Post job request</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="View offer list.html">
+                              <span class="icon"><i class="fas fa-folder"></i></i></span>
+                              <span class="item">View offer list</span>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="parentprofile.html"class="active">
+                                <span class="icon"><i class="fas fa-cog"></i></span>
+                                <span class="item">Manage profile</span>
+                            </a>
+                        </li>
+                        
+          </ul>
+          
+              </div>
+              
+          </div>
+        <script>
+              var hamburger = document.querySelector(".hamburger");
+            hamburger.addEventListener("click", function(){
+                document.querySelector("body").classList.toggle("active");
+            })
+        </script>
+      <!-- ========================================================================================== -->
+      
+
+
+
         <nav>
             <div class="conatainer">
                 <img src="KG4.png" class="logo" alt="Logo" />
@@ -69,6 +144,7 @@
         <div class="profile">
             <center><img class="pro" src="157-1579943_no-profile-picture-round.png" alt="user's photo"> </center>
             <h1>Personal Information</h1>
+            <div class="left">
             <div class="in"><Label for="fname">First name</Label>
             <input type="text" name="First name" value="Firstname" id="fname" required></div>
             
@@ -77,11 +153,12 @@
           
                     <div class="in"> <Label for="pass">Password</Label>
             <input type="password" name="password" value="Password" id="pass" required></div>
-           
-                        <div class="in">  <Label for="email">Email Address</Label>
+           </div>
+            <div class="right">
+           <div class="in">  <Label for="email">Email Address</Label>
             <input type="email" name="email"  value="Email" id="email" required></div>
 
-            <div class="in">  <Label for="city">City</Label>
+            <div class="in">  <Label for="city">City</Label><br>
                 <input type="text" name="city" value="City" id="city" required></div>
 
                 <div class="in"><label for="loc">Location</label>
@@ -92,7 +169,7 @@
              </form>
                     <!-- <input  type="text" name="loc" value="Location" id="loc" required> -->
                 </div>
-
+            </div>
             <!-- <div class="button"><input type="submit" value="SAVE CHANGES"></div> -->
             <!-- <div class="button"><input type="reset" value="DELETE PROFILE"></div> -->
             <!-- <div class="button1"><input type="submit" value="SAVE CHANGES"></div> -->
@@ -113,38 +190,39 @@
 </form>
 
 
-        
-<div class= "footer">
+  <!-- ========================================================================================== -->
+
+
+  <div class= "footer">
     <div class="col-1">
-        <h3><b>ABOUT US</b></h3>
-         
-        <p>At KinderGuardians we distinguish ourselves on creating special 
-            memorable moments for your little angels. Our babysitters don't just babysit your kids, 
-            they teach them valuable lessons that keep them amused and more importantly smiling thanks
-             to their creative teaching style.</p>
-      </div><br>
-<div id="footer"></div>
-<div class="col-2">
-
-<h3><b>NEWSLETTER</b></h3>
-<form class="foot">
-
+       <h3><b>ABOUT US</b></h3>
+       <p>At KinderGuardians we distinguish ourselves on creating special 
+          memorable moments for your little angels. Our babysitters don't just babysit your kids, 
+          they teach them valuable lessons that keep them amused and more importantly smiling thanks
+          to their creative teaching style.</p>
+    </div><br>
+ <div id="footer"></div>
+ <div class="col-2">
+ <h3><b>NEWSLETTER</b></h3>
+ <form>
     <input type="text" placeholder="Your Email Address" required>
     <br>
     <button type="submit">SUBSCRIBE NOW </button>
-</form>
-</div><br>
-
-<div class="col-3">
-<h3><b>CONTACT US</b></h3>
-<a href="mailto:info@kinderguardians.com">info@kinderguardians.com</a>
-<div class="social-icons"></div>
-<i class="fab fa-twitter"></i>
-<i class="fab fa-instagram"></i>
-<br><br><br>
-<p>&copy;2022 KinderGuardians</p>
-</div>
-</div>
+ </form>
+ </div><br>
+ <div class="col-3">
+ <h3><b>CONTACT US</b></h3>
+ <a href="mailto:info@kinderguardians.com">info@kinderguardians.com</a>
+ <div class="social-icons"></div>
+ <i class="fab fa-twitter"></i>
+ <i class="fab fa-instagram"></i>
+ <br>
+ <p>&copy;2022 KinderGuardians</p>
+ </div>
+ </div>
+ 
+ <!-- ======================================================================== -->
+    
 
     </body>
 </html>
