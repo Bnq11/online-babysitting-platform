@@ -16,15 +16,82 @@ session_start();
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <title>Offer</title>
 
-<script>
-            window.addEventListener("load", setInterval);
-            setInterval(checkRequest, 1000);
-            function checkRequest(){
-                document.getElementById("Post-request").innerHTML =<?php  checkrequest($conn) ?>;
-            }
-        </script>
+
 </head>
 <body>
+
+<div class="wrapper">
+        <!--Top Menu & Menu button-->
+        <!-- <div class="section">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <a href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+    </div> -->
+          <div class="sidebar">
+              <div class="profile1">
+                <br><br><br><br>
+                    <img src="157-1579943_no-profile-picture-round.png" alt="profile picture"> 
+                    <br>Parent name 
+                  <br>
+              </div>
+                <!--Menu item-->
+                <ul>
+                    <li>
+                        <a href="menuparent.html" >
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookingsparent.html#CurrentBookings" >
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">Current bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookingsparent.html#PreviousBookings" >
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">Previous bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offer.html"class="active">
+                            <span class="icon"><i class="fas fa-folder"></i></i></span>
+                            <span class="item">Post job request</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="View offer list.html"">
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">View offer list</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="parentprofile.html">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Manage profile</span>
+                        </a>
+                    </li>
+                    
+      </ul>
+      
+          </div>
+          
+      </div>
+    <script>
+          var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+  <!-- ========================================================================================== -->
+  
+
     <nav>
         <div class="conatainer">
             <img src="KG4.png" class="logo" alt="Logo" />
@@ -53,7 +120,7 @@ session_start();
             </label></div>
         
         <div class="age">
-            <label>Child's Age:
+            <label>Child's Age:<br>
             <input type="text" value="7" >
             </label> </div>
 

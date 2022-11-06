@@ -3,7 +3,6 @@
 <?php
 session_start();
 ?>
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -18,6 +17,76 @@ session_start();
 
 </head>
 <body>
+<div class="wrapper">
+        <!--Top Menu & Menu button-->
+        <!-- <div class="section">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <a href="#">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+    </div> -->
+          <div class="sidebar">
+              <div class="profile1">
+                <br><br><br><br>
+                    <img src="157-1579943_no-profile-picture-round.png" alt="profile picture"> 
+                    <br>Parent name 
+                  <br>
+              </div>
+                <!--Menu item-->
+                <ul>
+                    <li>
+                        <a href="menuparent.html" >
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookingsparent.html#CurrentBookings" >
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">Current bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookingsparent.html#PreviousBookings" >
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">Previous bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="offer.html"class="active">
+                            <span class="icon"><i class="fas fa-folder"></i></i></span>
+                            <span class="item">Post job request</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="View offer list.html"">
+                          <span class="icon"><i class="fas fa-folder"></i></i></span>
+                          <span class="item">View offer list</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="parentprofile.html">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Manage profile</span>
+                        </a>
+                    </li>
+                    
+      </ul>
+      
+          </div>
+          
+      </div>
+    <script>
+          var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+  <!-- ========================================================================================== -->
     <nav>
         <div class="conatainer">
             <img src="KG4.png" class="logo" alt="Logo" />
@@ -34,7 +103,10 @@ session_start();
     <section class="Post-request">
 
 
-<form action="offer.php" method="POST">
+
+
+
+<form action="requests.php" method="POST">
 
 <div>
     <h2>Post Job Request</h2>
@@ -49,7 +121,7 @@ session_start();
 
 <div class="age">
     <label>Child's Age: <br>
-    <input type="text" name="age" >
+    <input type="number" name="age" >
     </label> </div>
 
  <div class="service">
@@ -70,9 +142,9 @@ session_start();
 
         <div class="right">
          <label> 
-           Date: <br> <input class="date" id="date" type="date" name="date" value="#"> </label> 
+           Date: <br> <input class="date" id="date" type="date" name="date" value="#"> </label> <br>
             <label>Sessin Duration (Start):<br><input class="start" type="time" name="stime" value="#"> <br></label> 
-            <label><span class="#">Session Duration (End):</span> <input class="end" type="etime" name="time" value="#"><br> </label> 
+            <label><span class="#">Session Duration (End):</span> <input class="end" type="time" name="etime" value="#"><br> </label> 
           <br> 
 
         </label>
@@ -86,24 +158,7 @@ session_start();
             <input id ="post" type="submit" value="Post request">
             <input id="cancel" type="reset" value="Cancel">
 
-            <?php 
-
-$name = $_POST['name'];
-$age = $_POST['age'];
-$service = $_POST['services'];
-$date = $_POST['date'];
-$start = $_POST['stime'];
-$end = $_POST['etime'];
-
-
-$sql = "INSERT INTO Requests( Name , Age , Service_type, Date , Start_duration , End_Duration) 
-    VALUES ('$name' , '$age' , '$service' , '$date' , '$start' , '$end')";
-     mysqli_query($conn , $sql);
-
-     header("location: status.php");
-
-     ?>
-                    
+                <?php mysqli_close($conn);?>
   </form>
     </section> 
    <!-- ========================================================================================== -->
