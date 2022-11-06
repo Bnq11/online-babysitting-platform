@@ -21,23 +21,24 @@ $dateE=date_create($z);
 $end= date_format($dateE,"Y-m-d H:i:s");
 
 $sitterid= 1;
-//$x="maha@gmail.com";//
-$parentid = 1;//"SELECT parentID FROM parent WHERE  parentemail='$x'";
-//$result2 = mysqli_query($conn, $parentid);
 
-//if($row = mysqli_fetch_row($result2))
-          // {
-                    //$var1=$row[0];
-                   // $var2=(int)$var1;
+$x=$_SESSION["emailparent"];//
+$parentid = "SELECT parentID FROM parent WHERE  parentemail='$x'";
+$result2 = mysqli_query($conn, $parentid);
 
-$sql = "INSERT INTO bookings"."( childName , childAge , service,durationSTART , durationEND , sitterid, parentid)". 
-    "VALUES ('$name' , '$age' , '$service' , '$start' , '$end' , '$sitterid' , '$parentid')";
+if($row = mysqli_fetch_row($result2))
+          {
+                    $var1=$row[0];
+                    $var2=(int)$var1;
+
+$sql = "INSERT INTO bookings"."( childName , childAge , service , durationSTART , durationEND , sitterid, parentid)". 
+    "VALUES ('$name' , '$age' , '$service' , '$start' , '$end' , '$sitterid' , '$var2')";
     if( !($result = mysqli_query($conn , $sql))){
         print ("<p> Could not post request!</p>");
         die("Failed");
     }
-//}
-                
+
+}          
 
      header("location: status.php");
 

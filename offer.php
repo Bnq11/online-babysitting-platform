@@ -17,6 +17,10 @@ session_start();
 
 </head>
 <body>
+
+<?php $_SESSION["emailparent"]=$_POST["username"]; ?>   
+
+
 <div class="wrapper">
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
