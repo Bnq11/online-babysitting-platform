@@ -91,6 +91,38 @@ session_start();
     </script>
   <!-- ========================================================================================== -->
   
+  <?php
+    $_SESSION["emailparent"]=$_POST["username"];    
+
+    $x=$_SESSION["emailparent"];//
+   
+     $sql = "SELECT parentID FROM parent WHERE  parentemail='$x'";
+     $resultp = mysqli_query($conn, $sql);
+     $y = 0; 
+      
+     if($row = mysqli_fetch_row($resultp))
+{
+  
+    $var1=$row[0];
+    $var2=(int)$var1;
+    $query1 = "SELECT * FROM bookings where parentid ='$var2'";
+    $result1 = mysqli_query($conn, $query1);
+    if(mysqli_num_rows($result1) == 0)
+    echo "<div class=\"info\"><h3 class = \"title2\">NO Posted Requests</h3></div>"
+
+    else{
+        while($row = mysqli_fetch_array($result)){ 
+            $childname = $row['childName'];
+            $childage = $row['childAge'];                                   
+            $rDate = strtotime($row['Date']);
+            $rtype = $row['Service'];
+            $sduration = $row['durationSTART'];
+            $eduration = $row['durationEND'];
+            $rID = $row['parentID'];
+          
+
+
+?>
 
     <nav>
         <div class="conatainer">
