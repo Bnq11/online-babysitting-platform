@@ -42,6 +42,25 @@
 
          <div class="set">
             <h1 class="offer">Request List</h1>
+
+            <?php
+               
+                $rID="";
+                
+                if(isset($_GET['parentID']))
+                    $name = $_GET['parentID'];
+            
+                $query = "SELECT * FROM bookings where sitterid='$'";
+                $result = mysqli_query($conn, $query);
+                 if (mysqli_num_rows($result) > 0) {
+                    while ($data = mysqli_fetch_row($result)) 
+                    {
+                        <a href= "RequestDetails.php?requestID= <?php echo $bookingID; "> Details</a>
+                    }
+                }
+               ?>
+
+
             <table id="myTable" class="list">
                 <!-- Table with 3 columns -->
                  
