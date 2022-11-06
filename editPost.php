@@ -1,3 +1,10 @@
+<?php require("connection.php"); ?>
+
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +16,13 @@
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <title>Offer</title>
 
-
+<script>
+            window.addEventListener("load", setInterval);
+            setInterval(checkRequest, 1000);
+            function checkRequest(){
+                document.getElementById("Post-request").innerHTML =<?php  checkrequest($conn) ?>;
+            }
+        </script>
 </head>
 <body>
     <nav>

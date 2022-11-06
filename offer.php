@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php require("connection.php"); ?>
+
+<?php
+session_start();
+?>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,61 +30,81 @@
                 </ul>
         </div>
          </nav>
-        
+    
     <section class="Post-request">
-     <form action="requests.php" method="post">
 
-        <div>
-            <h2>Post Job Request</h2>
+
+<form action="offer.php" method="POST">
+
+<div>
+    <h2>Post Job Request</h2>
+</div>
+
+
+    <div class="left">
+<div class="name">
+    <label>Child's Name: <br>
+    <input type="text" name="name" >
+    </label></div>
+
+<div class="age">
+    <label>Child's Age: <br>
+    <input type="text" name="age" >
+    </label> </div>
+
+ <div class="service">
+         <label>Type of service: <br>
+        <select class="services" name="services" >
+            <option selected>Choose an option</option>
+            <option>Toddler babysitting</option>
+            <option>Infant babysitting</option>
+            <option>Child babysitting</option>
+            <option>After school care</option>
+            <option>Holiday sitter</option>
+            <option>Help in homework</option>
+            </select>
+         </label> </div>
+
+         
         </div>
 
-       
-            <div class="left">
-        <div class="name">
-            <label>Child's Name: <br>
-            <input type="text" >
-            </label></div>
-        
-        <div class="age">
-            <label>Child's Age: <br>
-            <input type="text" >
-            </label> </div>
+        <div class="right">
+         <label> 
+           Date: <br> <input class="date" id="date" type="date" name="date" value="#"> </label> 
+            <label>Sessin Duration (Start):<br><input class="start" type="time" name="stime" value="#"> <br></label> 
+            <label><span class="#">Session Duration (End):</span> <input class="end" type="etime" name="time" value="#"><br> </label> 
+          <br> 
 
-         <div class="service">
-                 <label>Type of service: <br>
-                <select class="services" >
-                    <option selected>Choose an option</option>
-                    <option>Toddler babysitting</option>
-                    <option>Infant babysitting</option>
-                    <option>Child babysitting</option>
-                    <option>After school care</option>
-                    <option>Holiday sitter</option>
-                    <option>Help in homework</option>
-                    </select>
-                 </label> </div>
-
-                 
-                </div>
-
-                <div class="right">
-                 <label> 
-                   Date: <br> <input class="date" id="date" type="date" name="date" value="#"> </label> 
-                    <label>Sessin Duration (Start):<br><input class="start" type="time" name="time" value="#"> <br></label> 
-                    <label><span class="#">Session Duration (End):</span> <input class="start" type="time" name="time" value="#"><br> </label> 
-                  <br> 
-
-                </label>
+        </label>
 
 
-            </div>
+    </div>
 
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
             <input id ="post" type="submit" value="Post request">
             <input id="cancel" type="reset" value="Cancel">
 
-                            
-          </form>
+            <?php 
+
+$name = $_POST['name'];
+$age = $_POST['age'];
+$service = $_POST['services'];
+$date = $_POST['date'];
+$start = $_POST['stime'];
+$end = $_POST['etime'];
+
+
+$sql = "INSERT INTO Requests( Name , Age , Service_type, Date , Start_duration , End_Duration) 
+    VALUES ('$name' , '$age' , '$service' , '$date' , '$start' , '$end')";
+     mysqli_query($conn , $sql);
+
+     header("location: status.php");
+
+     ?>
+                    
+  </form>
     </section> 
    <!-- ========================================================================================== -->
 

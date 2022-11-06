@@ -439,22 +439,26 @@ a{
 }
 
 
-.Post-request button {
+.Post-request #post, #cancel ,#save {
   position: relative;
   padding: 10px 30px;
    /* margin-left: auto;  */
    background-color:#75552b; 
+   width: auto;
+   height: auto;
+   color: white;
+   border-radius: 40px;
   border: none;  
   position: relative;
   cursor: pointer; 
  } 
 
-.Post-request  .save{
+.Post-request  #save{
   margin-top: 0px;
   margin-left: 455px;
 }
 
-.save:hover{
+#save:hover{
   color:burlywood;
 }
 
