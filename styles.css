@@ -597,17 +597,4 @@ color: burlywood;
 }  
 
  
-  .back{
-  position: relative;
-  padding: 10px 30px;
-   /* margin-left: auto;  */
-   background-color:#75552b; 
-   width: auto;
-   height: auto;
-   color: white;
-   border-radius: 40px;
-  border: none;  
-  position: relative;
-  cursor: pointer; 
-
-}
+  
