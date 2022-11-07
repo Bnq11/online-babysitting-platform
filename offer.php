@@ -18,7 +18,7 @@ session_start();
 </head>
 <body>
 
-<?php $_SESSION["emailparent"]=$_POST["username"]; ?>   
+
 
 
 <div class="wrapper">
@@ -130,15 +130,15 @@ session_start();
 
  <div class="service">
          <label>Type of service: <br>
-        <select class="services" name="services" >
-            <option selected>Choose an option</option>
+        <input type="text" name="services" >
+            <!-- <option selected>Choose an option</option>
             <option>Toddler babysitting</option>
             <option>Infant babysitting</option>
             <option>Child babysitting</option>
             <option>After school care</option>
             <option>Holiday sitter</option>
             <option>Help in homework</option>
-            </select>
+            </select> -->
          </label> </div>
 
          

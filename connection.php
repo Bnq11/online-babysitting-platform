@@ -5,4 +5,8 @@
 
     if(!mysqli_select_db($conn, "babysitterplatform"))
         die("Could not open the babysitterplatform database.");
+
+
+
+
 ?>
