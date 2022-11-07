@@ -1,7 +1,15 @@
 <?php include_once("connection.php"); ?>
 
 <?php
+
+include 'includes/functions2.inc.php';
+
+
 session_start();
+// $_SESSION["username"]=$_POST["username"];
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,11 +51,11 @@ color: #75552b;
 
 
 
-    <?php $_SESSION["emailparent"]=$_POST["username"]; ?>   
+     <?php //  $_SESSION["emailparent"]=$_POST["username"]; ?>     
 
     <!-- ========================================================================================== -->
     <div class="wrapper">
-    <button class="back" onlick = "window.history.back()"> Go Back </button>
+    <!-- <button class="back" onlick = "window.history.back()"> Go Back </button> -->
       <!--Top Menu & Menu button-->
       <!-- <div class="section">
       <div class="top_navbar">
@@ -93,13 +101,13 @@ color: #75552b;
                       </a>
                   </li>
                   <li>
-                      <a href="View offer list.html"">
+                      <a href="View offer list.html">
                         <span class="icon"><i class="fas fa-folder"></i></i></span>
                         <span class="item">View offer list</span>
                       </a>
                   </li> 
                   <li>
-                      <a href="parentprofile.html">
+                      <a href="parentprofile.php">
                           <span class="icon"><i class="fas fa-cog"></i></span>
                           <span class="item">Manage profile</span>
                       </a>
@@ -187,6 +195,6 @@ color: #75552b;
         </div>
         </div>
   
-</body>>
+</body>
 </html>
 

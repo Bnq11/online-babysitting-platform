@@ -103,9 +103,9 @@ function loginUser($conn, $Email, $Passwrd){
     }
     else {
         session_start();
-        $_SESSION["username"] = $emailExists["sitteremail"];
+        $_SESSION["username"] = $emailExists["parentemail"];
         // $_SESSION["ID"] = $emailExists["sitterID"];
-        header("location: ../menuparent.html");
+        header("location: ../menuparent.php");
         exit();
     }
 }
