@@ -83,19 +83,19 @@ color: #75552b;
                       </a>
                   </li>
                   <li>
-                      <a href="bookingsparent.html#CurrentBookings">
+                      <a href="bookingsparent.php">
                         <span class="icon"><i class="fas fa-folder"></i></i></span>
                         <span class="item">Current bookings</span>
                       </a>
                   </li>
                   <li>
-                      <a href="bookingsparent.html#PreviousBookings">
+                      <a href="bookingsparent.php">
                         <span class="icon"><i class="fas fa-folder"></i></i></span>
                         <span class="item">Previous bookings</span>
                       </a>
                   </li>
                   <li>
-                      <a href="offer.html">
+                      <a href="offer.php">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">Post job request</span>
                       </a>

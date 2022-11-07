@@ -139,8 +139,7 @@ session_start();
    
 
 
-    $x=3;
-    // $_GET['bookingID']; 
+    $x= $_GET['bookingID']; 
     
     
     $sql = "SELECT * FROM bookings WHERE bookingID= '$x'" ;
