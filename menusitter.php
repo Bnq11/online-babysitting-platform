@@ -40,7 +40,7 @@ color: #75552b;
         <?php $_SESSION["emailb"]=$_POST["username"]; ?>   
     <!-- ========================================================================================== -->
     <div class="wrapper">
-    <button class="back" onlick = "window.history.back()"> Go Back </button>
+    <button class="back"> Go Back </button>
     <script src="script.js"></script>
         <!--Top Menu & Menu button-->
         <!-- <div class="section">

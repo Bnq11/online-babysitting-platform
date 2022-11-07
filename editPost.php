@@ -15,33 +15,13 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <title>Offer</title>
-<style type="text/css">
-    .back{
-  position: relative;
-  padding: 10px 30px;
-   /* margin-left: auto;  */
-   background-color:#d7b593; 
-   width: auto;
-   height: auto;
-   color: white;
-   /* border-radius: 40px; */
-  border: none;  
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
-  font-size: medium; }
-
-  .back:hover{
-color: #75552b;
-  }
-  </style>
 
 </head>
 <body>
 
 
 <div class="wrapper">
-<button class="back" onlick = "window.history.back()"> Go Back </button>
+
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">
@@ -117,8 +97,8 @@ color: #75552b;
 
     // $x=$_SESSION["emailparent"];//
 
-    $id = $_GET['requestID'];
-    $_SESSION["$IDr"] = $id;
+    // $id = $_GET['requestID'];
+    // $_SESSION["$IDr"] = $id;
     //  $sql = "SELECT parentID FROM parent WHERE  parentemail='$x'";
     //  $resultp = mysqli_query($conn, $sql); 
       
@@ -127,36 +107,57 @@ color: #75552b;
   
 //     $var1=$row[0];
 //     $var2=(int)$var1;
-    $query1 = "SELECT * FROM bookings where ID =".$id.";";
-    $result1 = mysqli_query($conn, $query1);
-    if (mysqli_num_rows($result1) == 0)
-    echo "<div class=\"info\"><h3 class = \"title2\">No Posted Requests</h3></div>";
-    else {
-        while($row = mysqli_fetch_array($result1)){ 
-          $_GLOBAL['childnamer'] = $row['childName'];
-           $childage = $row['childAge'];
+    // $query1 = "SELECT * FROM bookings where ID =".$id.";";
+    // $result1 = mysqli_query($conn, $query1);
+    // if (mysqli_num_rows($result1) == 0)
+    // echo "<div class=\"info\"><h3 class = \"title2\">No Posted Requests</h3></div>";
+    // else {
+    //     while($row = mysqli_fetch_array($result1)){ 
+    //     $childname = $row['childName'];
+    //        $childage = $row['childAge'];
 
-            $y= $row[3];
-            $z=$row[4];
+    //         $y= $row[3];
+    //         $z=$row[4];
             
-            $dateS=date_create($y);
-            $start= date_format($dateS,"h:ia");
+    //         $dateS=date_create($y);
+    //         $start= date_format($dateS,"h:ia");
             
-            $dateE=date_create($z);
-            $end= date_format($dateE,"h:ia");
+    //         $dateE=date_create($z);
+    //         $end= date_format($dateE,"h:ia");
             
-            $date=date_format($dateS,"Y/m/d");
+    //         $date=date_format($dateS,"Y/m/d");
         
-            $stype = $row['Service'];
-            $sduration = $row['durationSTART'];
-            $eduration = $row['durationEND'];
-            $pID = $row['parentID'];
+    //         $stype = $row['Service'];
+    //         $sduration = $row['durationSTART'];
+    //         $eduration = $row['durationEND'];
+    //         $pID = $row['parentID'];
           
-                                }  
-                            }
+    //                             }  
+    //                         }
+
+    
+   
 
 
-
+    $x=3;
+    // $_GET['bookingID']; 
+    
+    
+    $sql = "SELECT * FROM bookings WHERE bookingID= '$x'" ;
+    
+    
+    
+                $query= mysqli_query($conn, $sql);
+    
+    
+                if($row=mysqli_num_rows($query)>0){ 
+    
+    
+                    foreach($query as $user){
+                
+                
+                 
+                
 ?>
 
     <nav>
@@ -184,17 +185,17 @@ color: #75552b;
         <div class="left">
         <div class="name">
             <label>Child's Name:
-            <input type="text" name="name" value="<?php echo $childnamer; ?>" >
+            <input type="text" name="name" value="<?php echo $user['childName'] ; ?>" >
             </label></div>
         
         <div class="age">
             <label>Child's Age:<br>
-            <input type="text" name="age" value="<?php echo $childage; ?>" >
+            <input type="text" name="age" value="<?php echo $user['childAge'];  ?>" >
             </label> </div>
 
          <div class="service">
                  <label>Type of service:
-                <input type = "text" name="services"  value= "<?php echo $stype; ?>">
+                <input type = "text" name="services"  value= "<?php echo $user['servicetype']; ?>">
                     <!-- <option >Choose an option</option>
                     <option>Toddler babysitting</option>
                     <option>Infant babysitting</option>
@@ -206,12 +207,25 @@ color: #75552b;
                  </label> </div>
 
         </div>
+ <?php
+        //    $y= $user['durationSTART'];
+        //    $z= $user['durationEND'] ;
+            
+        //     $dateS = date_create($y);
+        //     $start = date_format($dateS,"h:ia");
+            
+        //    $dateE= date_create($z);
+        //    $end= date_format($dateE,"h:ia");
+            
+        //    $date= date_format($dateS,"Y/m/d"); 
+          ?>
+        
 
         <div class="right">
-                       Date: <br> <input class="#" id="date" type="date" name="date" value="<?php echo $date;?>"><br> </label> 
+                       Date: <br> <input class="#" id="date" type="date" name="date" value="<?php echo $user['Date_of_booking'] ;?>"><br> </label> 
                       <!-- <label>Session Duration:<br></label>  -->
-                        <label>Session Duration (Start): <input class="#" type="time" name="stime" value="<?php echo $sduration; ?>"> <br></label> 
-                        <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="etime" value="<?php echo $eduration; ?>"><br> </label> 
+                        <label>Session Duration (Start): <input class="#" type="time" name="stime" value="<?php echo $user['durationSTART'] ; ?>"> <br></label> 
+                        <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="etime" value="<?php echo $user['durationEND']; ?>"><br> </label> 
                       <br>
     
                     </label></div>
@@ -225,7 +239,27 @@ color: #75552b;
          </form>
     </section>
 
-  
+    <?php
+
+
+    
+}// end for
+
+}// end rows
+
+else{
+
+
+
+?>
+
+<h4> NO records found</h4>
+
+<?php
+
+} // end else
+
+?>
 
     <!-- ========================================================================================== -->
 
