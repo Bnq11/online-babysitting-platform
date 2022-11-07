@@ -48,20 +48,47 @@
                <ul>
                   <li><a href="Home.html">Home</a></li>
                   <li><a href="#footer">About us</a></li>
-                  <li><a href="signIn.html">Sign in</a></li>
+                  <li><a href="signInP.php">Sign in</a></li>
                   
                   </ul>
          </div>
       </nav>
 <!-- ========================================================================================== -->
 <section class="Registeration">
-   <form>
+   <form action="includes\signUpP.inc.php" method="post">
+   
+   <?php
+            if(isset($_GET["error"])){
+                  if($_GET["error"] == "emptyinput"){
+                        echo "<p> You didn't fill in all fields! </p>";
+                  }
+                  else if ($_GET["error"] == "invalidemail"){
+                        echo "<p> Write a proper email! </p>";
+                  }
+
+                  else if ($_GET["error"] == "passwordsdontmatchl"){
+                        echo "<p> Your passwords don't match! </p>";
+                  }
+
+                  else if ($_GET["error"] == "stmtfailed"){
+                        echo "<p> Something went wrong, try again! </p>";
+                  }
+
+                  else if ($_GET["error"] == "emailtaken"){
+                        echo "<p> Email already taken! </p>";
+                  }
+
+                  else if ($_GET["error"] == "none"){
+                        echo "<p> You signed up! </p>";
+                  }
+}
+?>   
       <h2>Sign Up</h2>
       <center><img class="pro" src="157-1579943_no-profile-picture-round.png" alt="user's photo"> <br><label> Profile photo <br></label> </center>
          <!-- <div class="container">  -->
             <div class="left">
-            <label>Firstname: </label>  <br> 
-            <input type="text" name="firstname" placeholder= "Firstname" size="15" required /> <br>
+            <label>  Firstname: </label>  <br> 
+            <input type="text" name="firstname" placeholder= "Firstname" id="firstname" required /> <br>
             
             <label for="email">Email:</label>  <br>
             <input type="email" placeholder="Enter Email" id = "email" name="email" required><br>
@@ -75,13 +102,13 @@
 
             <div class="right">
             <label> Lastname:</label>  <br>  
-            <input type="text" name="lastname" placeholder="Lastname" size="15" required />  <br> 
+            <input type="text" name="lastname" placeholder="Lastname" id="lastname" required />  <br> 
             
            
             <label> City: </label>     <br> 
             <input type="text" name="City" placeholder="City" size="15" required />  <br>
             <label> Location:  </label><br>
-            <input type="text" placeholder="Street Address - city - Zip Code "    required><br>
+            <input type="text" placeholder="Street Address - city - Zip Code " name="location"    required><br>
             <label> Profile photo: <input type="file" onchange="readURL(this)" accept="Image/*" /></label> 
                
             </div>
@@ -97,10 +124,10 @@
            <center><div class="check"> <input type="checkbox" checked="checked"> I agree to the terms of use <a href="#">Terms & Policy</a></div></center>
            <br>
             <!-- <a href="menuparent.html"><button type="submit" class="registerbtn"> Register</button></a>  -->
-            <center><button type="submit" id="1" class="registerbtn">Register</button>  
+            <center><button type="submit" id="1" name= "submit" class="registerbtn">Register</button>  
             <br>
             <br>
-            <label> <b>Already have an account?  <a href="signIn.html">LOG IN</a>  </b> </label><br></center>
+            <label> <b>Already have an account?  <a href="signInP.php">LOG IN</a>  </b> </label><br></center>
             
    </form>
 </section> 

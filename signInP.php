@@ -31,17 +31,33 @@
     </nav>
     <!--================================================================================-->
     <section class="sign-in-form">
-    <form>
-        <h2>Sign In</h2>
+    <form action="includes\signInP.inc.php" method="post">
+    <?php
+            if(isset($_GET["error"])){
+                    if($_GET["error"] == "emptyinput"){
+                        echo "<p> You didn't fill in all fields! </p>";
+                    }
+                    else if ($_GET["error"] == "wronglogin"){
+                        echo "<p> Incorrect Login Information! </p>";
+                    }
+                    else if ($_GET["error"] == "wronglogin1"){
+                        echo "<p> Incorrect Password! </p>";
+                    }
+
+                }
+            ?> 
+    
+    
+    <h2>Sign In</h2>
     
         <label>Username </label>  <br>
             <input type="email" placeholder="Enter your email" name="username" required> <br> 
         <label>Password </label> <br>
             <input type="password" placeholder="Enter Password" name="password" required>  <br>
             <input type="checkbox" checked="checked"> Remember me <br>
-            <button type="submit">Login</button>
+            <button type="submit" id="1" name= "submit">Login</button>
             <br><br>
-            <label> <b>Not a member? Sign up as a <a href="signUpP.html">Parent</a> or <a href="SignUpS.html">Sitter</a> </b> </label> 
+            <label> <b>Not a member? Sign up as a <a href="signUpP.php">Parent</a> or <a href="SignUpS.php">Sitter</a> </b> </label> 
     
     </form>
     </section> 
