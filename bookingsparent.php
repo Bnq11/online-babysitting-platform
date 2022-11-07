@@ -10,7 +10,7 @@ if(false){header("location:signIn.php"); exit();}
     DEFINE('DB_USER','root');
     DEFINE('DB_PSWD','');
     DEFINE('DB_HOST','localhost');
-    DEFINE('DB_NAME','babysitterplatform-2');
+    DEFINE('DB_NAME','babysitterplatform');
 
     if (!$conn = mysqli_connect(DB_HOST,DB_USER,DB_PSWD))
         die("Connection failed.");

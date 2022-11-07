@@ -15,13 +15,33 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 <title>Offer</title>
+<style type="text/css">
+    .back{
+  position: relative;
+  padding: 10px 30px;
+   /* margin-left: auto;  */
+   background-color:#d7b593; 
+   width: auto;
+   height: auto;
+   color: white;
+   /* border-radius: 40px; */
+  border: none;  
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  font-size: medium; }
 
+  .back:hover{
+color: #75552b;
+  }
+  </style>
 
 </head>
 <body>
 
 
 <div class="wrapper">
+<button class="back" onlick = "window.history.back()"> Go Back </button>
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">
@@ -93,26 +113,28 @@ session_start();
   <!-- ========================================================================================== -->
   
   <?php
-    $_SESSION["emailparent"]=$_POST["username"];    
+    // $_SESSION["emailparent"]=$_POST["username"];    
 
-    $x=$_SESSION["emailparent"];//
-   
-     $sql = "SELECT parentID FROM parent WHERE  parentemail='$x'";
-     $resultp = mysqli_query($conn, $sql); 
+    // $x=$_SESSION["emailparent"];//
+
+    $id = $_GET['requestID'];
+    $_SESSION["$IDr"] = $id;
+    //  $sql = "SELECT parentID FROM parent WHERE  parentemail='$x'";
+    //  $resultp = mysqli_query($conn, $sql); 
       
-     if($row = mysqli_fetch_row($resultp))
-{
+//      if($row = mysqli_fetch_row($resultp))
+// {
   
-    $var1=$row[0];
-    $var2=(int)$var1;
-    $query1 = "SELECT * FROM bookings where parentid ='$var2'";
+//     $var1=$row[0];
+//     $var2=(int)$var1;
+    $query1 = "SELECT * FROM bookings where ID =".$id.";";
     $result1 = mysqli_query($conn, $query1);
     if (mysqli_num_rows($result1) == 0)
     echo "<div class=\"info\"><h3 class = \"title2\">No Posted Requests</h3></div>";
     else {
         while($row = mysqli_fetch_array($result1)){ 
-            $childname = $row['childName'];
-            $childage = $row['childAge'];
+          $_GLOBAL['childnamer'] = $row['childName'];
+           $childage = $row['childAge'];
 
             $y= $row[3];
             $z=$row[4];
@@ -131,7 +153,7 @@ session_start();
             $pID = $row['parentID'];
           
                                 }  
-
+                            }
 
 
 
@@ -152,7 +174,8 @@ session_start();
     
 
     <section class="Post-request">
-     <form>
+   
+     <form action = "update.php" method = "post">
 
         <div>
             <h2>Job Request</h2>
@@ -161,12 +184,12 @@ session_start();
         <div class="left">
         <div class="name">
             <label>Child's Name:
-            <input type="text" value="<?php echo $childname; ?>" >
+            <input type="text" name="name" value="<?php echo $childnamer; ?>" >
             </label></div>
         
         <div class="age">
             <label>Child's Age:<br>
-            <input type="text" value="<?php echo $childage; ?>" >
+            <input type="text" name="age" value="<?php echo $childage; ?>" >
             </label> </div>
 
          <div class="service">
@@ -187,8 +210,8 @@ session_start();
         <div class="right">
                        Date: <br> <input class="#" id="date" type="date" name="date" value="<?php echo $date;?>"><br> </label> 
                       <!-- <label>Session Duration:<br></label>  -->
-                        <label>Sessin Duration (Start): <input class="#" type="time" name="time" value="<?php echo $sduration; ?>"> <br></label> 
-                        <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="time" value="<?php echo $eduration; ?>"><br> </label> 
+                        <label>Session Duration (Start): <input class="#" type="time" name="stime" value="<?php echo $sduration; ?>"> <br></label> 
+                        <label><span class="#">Session Duration (End):</span> <input class="#" type="time" name="etime" value="<?php echo $eduration; ?>"><br> </label> 
                       <br>
     
                     </label></div>
@@ -196,14 +219,13 @@ session_start();
                                 
     
 
-            <input id="save" type="submit" value="Save changes" onclick="functionA()">
+            <input id="save" type="submit" value="Save changes" >
+ 
 
-
-
-                            
          </form>
     </section>
 
+  
 
     <!-- ========================================================================================== -->
 
@@ -235,7 +257,7 @@ session_start();
  <p>&copy;2022 KinderGuardians</p>
  </div>
  </div>
-                            </div>
+                        
  <!-- ======================================================================== -->
     
 </body>
