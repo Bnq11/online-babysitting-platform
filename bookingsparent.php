@@ -1,6 +1,4 @@
 
-
-
 <?php
 
 session_start();
@@ -107,7 +105,7 @@ if(false){header("location:signIn.php"); exit();}
                         </a>
                     </li>
                     <li>
-                        <a href="View offer list.html"">
+                        <a href="View offer list.html">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">View offer list</span>
                         </a>
@@ -171,7 +169,7 @@ if(false){header("location:signIn.php"); exit();}
     $ID="1";
     
     
-    $booking ="SELECT * FROM booking where parentID='$ID'";
+    $booking ="SELECT * FROM bookings where parentID='$ID'";
 
 // AND status= 'A'
     
@@ -199,22 +197,6 @@ if(false){header("location:signIn.php"); exit();}
 
 
 
-   
-
-
-      
-
-
-
-    
-
-
-
-
-
-     
-
-     
      
      <tr>
          <td> <b>Duration start: <?php echo $user['durationSTART']; ?></b></td>
@@ -252,8 +234,6 @@ else{
 } // end else
 
 
-
-
 ?>
 </table>
 
@@ -268,7 +248,7 @@ else{
     <table id="myTable" class="ul">
 
 <?php 
-    $booking ="SELECT * FROM booking where parentID='$ID'";
+    $booking ="SELECT * FROM bookings where parentID='$ID'";
 
 
     
@@ -299,8 +279,7 @@ if(mysqli_num_rows($query)>0){
          
          <tr>
              <td> <b>Duration start: <?php echo $user['durationSTART']; ?> </b></td>
-             <td> <a href="RATE.php?requestID=<?php echo $user['ID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </td>
-    
+             <td> <a href="RATE.php?requestID=<?php echo $user['bookingID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </td>
          </tr>
          
          

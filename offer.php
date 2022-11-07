@@ -67,7 +67,7 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="View offer list.html"">
+                        <a href="View offer list.html">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">View offer list</span>
                         </a>
