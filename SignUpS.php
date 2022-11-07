@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="#footer">About us</a></li>
-                    <li><a href="signIn.html">Sign in</a></li>
+                    <li><a href="signInS.php">Sign in</a></li>
                     
                 </ul>
         </div>
@@ -27,10 +27,37 @@
 
 
 <section class="Registeration">
-    <form>
-        <h2>Sign Up</h2>
+    
+    <form action="includes/signUpS.inc.php" method="post">
+    <?php
+            if(isset($_GET["error"])){
+                    if($_GET["error"] == "emptyinput"){
+                        echo "<p> You didn't fill in all fields! </p>";
+                    }
+                    else if ($_GET["error"] == "invalidemail"){
+                        echo "<p> Write a proper email! </p>";
+                    }
+
+                    else if ($_GET["error"] == "passwordsdontmatchl"){
+                        echo "<p> Your passwords don't match! </p>";
+                    }
+
+                    else if ($_GET["error"] == "stmtfailed"){
+                        echo "<p> Something went wrong, try again! </p>";
+                    }
+
+                    else if ($_GET["error"] == "emailtaken"){
+                        echo "<p> Email already taken! </p>";
+                    }
+
+                    else if ($_GET["error"] == "none"){
+                        echo "<p> You signed up! </p>";
+                    }
+            }
+    ?>    
+    <h2>Sign Up</h2>
             <!-- <div class="container">    -->
-            <div class="left">
+        <div class="left">
             <label> Firstname: </label>   
             <input type="text" name="firstname" placeholder= "Firstname" size="15" required >   
             <label>Lastname: </label>    
@@ -44,32 +71,32 @@
             <label>Upload photo: </label>    
             <input type="file" onchange="readURL(this)" accept="Image/*" />  
         </div>
-            <div class="right">
+        <div class="right">
             <label> City: </label>    
             <input type="text" name="City" placeholder="City" size="15" required >   
             <label> ID: </label>  
-            <input type="number" name="Enter your id"   required/>  
+            <input type="number" placeholder="Enter your id" name = "NationalID"   required/>  
             <label> age:  </label>  
-            <input type="number"   required>  
+            <input type="number" name = "Age"  required>  
             <br>
             <label> Phone:  </label>  
-            <input type="number" name="with country code."  required>   
+            <input type="number" placeholder="with country code." name="Phone" required>   
             <label> Bio:  </label>   <br>
             <!-- <input type="text" placeholder="bio{such us, years of experience,...etc }"    required>  -->
-            <textarea cols="60" rows="3" placeholder="bio{such us, years of experience, education, languages, spoken, skills...etc }" value="bio" required>
+            <textarea name = "Bio" cols="60" rows="3" placeholder="bio{such us, years of experience, education, languages, spoken, skills...etc }" value="bio" required>
             </textarea><br>
-            <div>  
-            <label> Gender: </label><br>
-            <input type="radio" value="Male" name="gender"  required> Male   
-            <input type="radio" value="Female" name="gender" required> Female  
-            </div>  
+                <div>  
+                <label> Gender: </label><br>
+                <input type="radio" value="Male" name="gender"  required> Male   
+                <input type="radio" value="Female" name="gender" required> Female  
+                </div>  
         </div> 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <center><input type="checkbox" checked="checked"> I agree to the terms of use <a href="#">Terms & Policy</a>.<br>
             <!-- <a href="menusitter.html"><button type="submit" class="registerbtn">Register</button> </a>    -->
-            <button type="submit" id="1" class="registerbtn">Register</button>
+            <button type="submit" id="1" name= "submit" class="registerbtn">Register</button>
             <br><br>
-            <label> <b>Already have an account?  <a href="signIn.html">LOG IN</a>  </b> </label><br></form></center>
+            <label> <b>Already have an account?  <a href="signInS.php">LOG IN</a>  </b> </label><br></form></center>
             <!-- </div>   -->
         </form>
 </section> 
