@@ -12,6 +12,7 @@
 ?>
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,28 +29,9 @@ session_start();
     
         <style type="text/css">
             .currentJob h1 ,.prevJob h1{
-                margin-left:130px;
+                margin-left:300px;
             }
-    .back{
-  position: relative;
-  padding: 10px 30px;
-   /* margin-left: auto;  */
-   background-color:#d7b593; 
-   width: auto;
-   height: auto;
-   color: white;
-   /* border-radius: 40px; */
-  border: none;  
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
-  font-size: medium; }
-
-  .back:hover{
-color: #75552b;
-  }
- 
-
+            
             </style>
     </head>
     
@@ -57,8 +39,7 @@ color: #75552b;
               
     <!-- ========================================================================================== -->
     <div class="wrapper1">
-    <button class="back" > Go Back </button>
-    <script src="script.js"></script>
+        
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">
@@ -80,25 +61,25 @@ color: #75552b;
                 <!--Menu item-->
                 <ul>
                     <li>
-                        <a href="menusitter.html" >
+                        <a href="menusitter.php" >
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span class="item">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="request list.html">
+                        <a href="requestList.php">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">View job request list</span>
                         </a>
                     </li>
                     <li>
-                        <a href="status.html#My current jobs"class="active">
+                        <a href="status.php"class="active">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">Current jobs</span>
                         </a>
                     </li>
                     <li>
-                        <a href="status.html#My previous jobs"class="active">
+                        <a href="status.php"class="active">
                             <span class="icon"><i class="fas fa-folder"></i></i></span>
                             <span class="item">previous jobs</span>
                         </a>
@@ -136,7 +117,7 @@ color: #75552b;
                   
                     <ul>
                         <li><a href="Home.html">Home</a></li>
-                        <li><a href="menusitter.html">Services</a></li>
+                        <li><a href="menusitter.php">Services</a></li>
                         <li><a href="#footer">About us</a></li>
                         <li><a href="Home.html">Sign out</a></li>
                     </ul>
@@ -146,16 +127,17 @@ color: #75552b;
              <div class="currentJob">
                 <?php       
                           //  $_SESSION["emailb"]=$_POST["username"];
-                           $x=$_SESSION["emailb"];//
+                           $x=$_SESSION["username"];//
+                          // echo "<h1> $x </h1>";
                           // $x=$_POST["username"];//
-                           $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
+                           $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x';";
                            $result3 = mysqli_query($conn, $sql);
                            $y = 0; 
-                    if($row = mysqli_fetch_row($result3))
-                    {
-                        $var1=$row[0];
+                   if($row = mysqli_fetch_row($result3))
+                   {
+                       $var1=$row[0];
                         $var2=(int)$var1;
-                        $query1 = "SELECT * FROM bookings where sitterid ='$var2'";
+                        $query1 = "SELECT * FROM bookings where sitterid ='$var2'; ";
                         $result1 = mysqli_query($conn, $query1);
                         
                         /*$queryp = "SELECT parentid FROM bookings where sitterid ='$var2'";
@@ -193,7 +175,7 @@ color: #75552b;
                                 if($hourT-$hourT>=0){
                                 if($mint-$mintT>=0){
                                // print "next";*/
-                               if($start-$today >=0){
+                              // if($start-$today >=0){
                                 $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
                                 $resultpa = mysqli_query($conn, $querypa);
                                 $rowpa= mysqli_fetch_row($resultpa);
@@ -201,7 +183,8 @@ color: #75552b;
                                 echo "<table><caption> My current jobs: </caption>";
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; 
                                 echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>';
-                             } }
+                            // }
+                             }
                             }
                             
             
@@ -230,7 +213,7 @@ color: #75552b;
                                 if($hourT-$hourT>=0){
                                 if($mint-$mintT>=0){
                                // print "next";*/
-                               if($start-$today >=0){
+                              // if($start-$today >=0){
                                 $querypa = "SELECT parentemail FROM parent where parentID ='$row[8]'";
                                 $resultpa = mysqli_query($conn, $querypa);
                                 $rowpa= mysqli_fetch_row($resultpa);
@@ -239,17 +222,16 @@ color: #75552b;
                                 echo "<thead><tr> <th> child name</th> <th> child age</th> <th>service</th><th>price</th><th>time</th> <th>perent's email</th><th> Status</th> </tr></thead><tbody>"; }
                                 echo '<tr> <td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td> <td>'.$row[5].'</td> <td> from '.$row[3].' to '.$row[4].'</td><td><a href="mailto:'.$rowpa[0].'">'.$rowpa[0].'</a></td><td>'.$row[6].'</td> </tr>'; 
                                 $GLOBALS['y']++;}
-                            }
+                            
                             if($GLOBALS['y']>0)
                             {
                             echo"</tbody></table>";
-                            }else echo "<br><br><br><br><h1>There is no current jobs</h1>";
-                        }
-                       else{
-                        if($row = mysqli_fetch_row($result3)<=0) echo "<br><br><br><br><h1>There is no current jobs</h1>";
+                            }else echo "<br><br><br><br><h1>There is no current jobs</h1>";}
+                        //} else{
+                       // if($row = mysqli_fetch_row($result3)<=0) echo "<br><br><br><br><h1>There is no current jobs</h1>";
                         else 
                          echo mysqli_error();
-                        }
+                        //}
                         ?>
             </div>
             
@@ -279,12 +261,12 @@ color: #75552b;
                 </table>-->
             
                 <?php       
-                          //  $_SESSION["emailb"]=$_POST["username"];
-                           $x=$_SESSION["emailb"];//
-                          // $x=$_POST["username"];//
-                           $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
-                           $result3 = mysqli_query($conn, $sql);
-                           $y = 0; 
+                        //$_SESSION["emailb"]=$_POST["username"];
+                        $x=$_SESSION["emailb"];//
+                        //$x=$_POST["username"];//
+                        $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
+                        $result3 = mysqli_query($conn, $sql);
+                        $y = 0; 
                     if($row = mysqli_fetch_row($result3))
                     {
                         $var1=$row[0];

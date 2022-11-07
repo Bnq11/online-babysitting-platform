@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+     // $_SESSION["username"] =$_POST['username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,34 +16,17 @@ session_start();
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         <style type="text/css">
-    .back{
-  position: relative;
-  padding: 10px 30px;
-   /* margin-left: auto;  */
-   background-color:#d7b593; 
-   width: auto;
-   height: auto;
-   color: white;
-   /* border-radius: 40px; */
-  border: none;  
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
-  font-size: medium; }
-
-  .back:hover{
-color: #75552b;
-  }
+    
+  
   </style>
     </head>
     
     <body>
 
-        <?php $_SESSION["emailb"]=$_POST["username"]; ?>   
+       <?php// $_SESSION['username']=$_POST["username"]; ?>   
     <!-- ========================================================================================== -->
     <div class="wrapper">
-    <button class="back"> Go Back </button>
-    <script src="script.js"></script>
+    
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">

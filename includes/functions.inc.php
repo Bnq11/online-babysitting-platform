@@ -105,7 +105,7 @@ function loginUser($conn, $Email, $Passwrd){
         session_start();
         $_SESSION["username"] = $emailExists["sitteremail"];
         // $_SESSION["ID"] = $emailExists["sitterID"];
-        header("location: ../menusitter.html");
+        header("location: ../menusitter.php");
         exit();
     }
 }
