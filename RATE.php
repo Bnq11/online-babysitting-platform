@@ -53,7 +53,26 @@ if(false){header("location:signIn.php"); exit();}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-    
+    <style type="text/css">
+    .back{
+  position: relative;
+  padding: 10px 30px;
+   /* margin-left: auto;  */
+   background-color:#d7b593; 
+   width: auto;
+   height: auto;
+   color: white;
+   /* border-radius: 40px; */
+  border: none;  
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  font-size: medium; }
+
+  .back:hover{
+color: #75552b;
+  }
+  </style>
 
 
 
@@ -80,7 +99,7 @@ if(false){header("location:signIn.php"); exit();}
                 </ul>
         </div>
          </nav>
-
+         <button class="back" onlick = "window.history.back()"> Go Back </button>
          <form  method="POST" action="submitrate.php">
  <input type="hidden" name="requestID" value="<?php  echo  $_GET['requestID'];?>">
 

@@ -30,7 +30,26 @@ session_start();
             .currentJob h1 ,.prevJob h1{
                 margin-left:130px;
             }
-            
+    .back{
+  position: relative;
+  padding: 10px 30px;
+   /* margin-left: auto;  */
+   background-color:#d7b593; 
+   width: auto;
+   height: auto;
+   color: white;
+   /* border-radius: 40px; */
+  border: none;  
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  font-size: medium; }
+
+  .back:hover{
+color: #75552b;
+  }
+ 
+
             </style>
     </head>
     
@@ -38,6 +57,7 @@ session_start();
               
     <!-- ========================================================================================== -->
     <div class="wrapper1">
+    <button class="back" onlick = "window.history.back()"> Go Back </button>
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">
