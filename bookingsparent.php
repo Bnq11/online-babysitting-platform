@@ -1,9 +1,11 @@
 
+
 <?php
 
+// add include
 session_start();
 
-if(false){header("location:signIn.php"); exit();}
+if(false){header("location:signInP.php"); exit();}
 
     DEFINE('DB_USER','root');
     DEFINE('DB_PSWD','');
@@ -20,8 +22,6 @@ if(false){header("location:signIn.php"); exit();}
 
 
 ?>
-
-
 
 <!DOCTYPE html>
 
@@ -59,7 +59,7 @@ if(false){header("location:signIn.php"); exit();}
 
 <body>
 
-    <div class="wrapper2">
+    <div class="wrapper1">
         <!--Top Menu & Menu button-->
         <!-- <div class="section">
         <div class="top_navbar">
@@ -71,7 +71,7 @@ if(false){header("location:signIn.php"); exit();}
         </div>
         
     </div> -->
-          <div class="sidebar2">
+          <div class="sidebar1">
               <div class="profile1">
                 <br><br><br><br>
                     <img src="157-1579943_no-profile-picture-round.png" alt="profile picture"> 
@@ -81,37 +81,37 @@ if(false){header("location:signIn.php"); exit();}
                 <!--Menu item-->
                 <ul>
                     <li>
-                        <a href="menuparent.html" >
+                        <a href="menuparent.php" >
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span class="item">Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="bookingsparent.html#CurrentBookings" class="active">
+                        <a href="bookingsparent.php" class="active">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">Current bookings</span>
                         </a>
                     </li>
                     <li>
-                        <a href="bookingsparent.html#PreviousBookings" class="active">
+                        <a href="bookingsparent.php" class="active">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">Previous bookings</span>
                         </a>
                     </li>
                     <li>
-                        <a href="offer.html">
+                        <a href="offer.php">
                             <span class="icon"><i class="fas fa-folder"></i></i></span>
                             <span class="item">Post job request</span>
                         </a>
                     </li>
                     <li>
-                        <a href="View offer list.html">
+                        <a href="View offer list.php">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">View offer list</span>
                         </a>
                     </li> 
                     <li>
-                        <a href="parentprofile.html">
+                        <a href="parentprofile.php">
                             <span class="icon"><i class="fas fa-cog"></i></span>
                             <span class="item">Manage profile</span>
                         </a>
@@ -147,21 +147,14 @@ if(false){header("location:signIn.php"); exit();}
 
     
 <!-- ================================================================================= -->
-
-
-
 <div class="bookings">
-
-
-
-
-
-
     <h1 >  My Current Bookings</h1>
 <table id="myTable" class="ul">
     <!-- Table with 3 columns -->
 
-<?php
+
+
+    <?php
 
 
 
@@ -196,22 +189,22 @@ if(false){header("location:signIn.php"); exit();}
         ?>
 
 
-
+    
+     
      
      <tr>
-         <td> <b>Duration start: <?php echo $user['durationSTART']; ?></b></td>
-         <td> <a href=" editPost.php?bookingID=<?php echo $user['bookingID'] ;?>" > <button type="button" class="buttone">EDIT</button> </a></td>
+         <td> <b> Duration start :<?php echo $user['durationSTART']; ?></b></td>
+         <td> <a href=" editPost.php?requestID=<?php echo $user['ID'] ;?>"  > <button type="button" class="buttone">EDIT</button> </a></td>
          <td> <button type="button" class="buttone">DELETE</button></td>
 
      </tr>
      
+    
      
- 
+     
 
 
- 
-
- <?php
+     <?php
 
 
     
@@ -235,19 +228,25 @@ else{
 
 
 ?>
-</table>
 
-<br>
+
+ </table>
+
+
+ 
+
+ <br>
 
  <br><br>
-
-
 
  <h1 >  My Previous Bookings</h1>  
    
     <table id="myTable" class="ul">
+        <!-- Table with 3 columns -->
 
-<?php 
+
+
+        <?php 
     $booking ="SELECT * FROM bookings where parentID='$ID'";
 
 
@@ -274,16 +273,21 @@ if(mysqli_num_rows($query)>0){
     
     ?>
 
+
+
+        
+
+
+
+
         
          
          
          <tr>
              <td> <b>Duration start: <?php echo $user['durationSTART']; ?> </b></td>
-             <td> <a href="RATE.php?requestID=<?php echo $user['bookingID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </td>
+             <td> <a href="RATE.php?requestID=<?php echo $user['bookingID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </a></td>
+    
          </tr>
-         
-         
-
 
 
          <?php
@@ -312,6 +316,8 @@ else{
 
 
 ?>
+         
+         
      </table>
    
 
