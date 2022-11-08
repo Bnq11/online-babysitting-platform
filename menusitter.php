@@ -23,7 +23,7 @@ session_start();
     
     <body>
 
-       <?php// $_SESSION['username']=$_POST["username"]; ?>   
+       
     <!-- ========================================================================================== -->
     <div class="wrapper">
     
@@ -54,7 +54,7 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="request list.html">
+                        <a href="request list.php">
                           <span class="icon"><i class="fas fa-folder"></i></i></span>
                           <span class="item">View job request list</span>
                         </a>

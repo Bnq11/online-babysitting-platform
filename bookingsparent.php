@@ -227,7 +227,7 @@ else{
 
 ?>
 
-<h4> NO recodrs found</h4>
+<h4> NO records found</h4>
 
 <?php
 
@@ -279,7 +279,7 @@ if(mysqli_num_rows($query)>0){
          
          <tr>
              <td> <b>Duration start: <?php echo $user['durationSTART']; ?> </b></td>
-             <td> <a href="RATE.php?requestID=<?php echo $user['bookingID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </td>
+             <td> <a href="RATE.php?bookingID=<?php echo $user['bookingID'] ;?> " > <button type="button" class="buttonrev">REVIEW & RATE</button>     </a> </td>
          </tr>
          
          
@@ -302,7 +302,7 @@ else{
 
 ?>
 
-<h4> NO recodrs found</h4>
+<h4> NO records found</h4>
 
 <?php
 

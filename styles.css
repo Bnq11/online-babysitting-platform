@@ -528,7 +528,7 @@ a{
 }
 
 
-.Post-request #post, #cancel ,#save {
+.Post-request #post ,#save {
   position: relative;
   padding: 10px 30px;
    /* margin-left: auto;  */
@@ -564,10 +564,7 @@ a{
    border: none; 
 }
 
-.Post-request #cancel{
- display: inline;
- margin-left: 20px;
-}
+
 
 .Post-request #post{
   display: inline;
@@ -579,9 +576,7 @@ a{
 color: burlywood;
 }
 
-#cancel:hover{
-  color:red;
-}
+
 
 .Post-request input{
   font-size: medium;

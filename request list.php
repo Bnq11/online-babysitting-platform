@@ -9,6 +9,8 @@
 
     if(!mysqli_select_db($conn, DB_NAME))
         die("Could not open the ".DB_NAME." database.");
+
+        session_start();
 ?>
 
 <!DOCTYPE html>
@@ -45,26 +47,26 @@
             <h1 class="offer">Request List</h1>
 
             <?php
-               // $x=$_SESSION["emailsitter"];//add by anoud
-                $x='amal@ht.mail';
-                $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
-                $result3 = mysqli_query($conn, $sql);
-                if($row = mysqli_fetch_row($result3))
-                    {
-                        $var1=$row[0];
-                        $var2=(int)$var1;
-                        $query1 = "SELECT * FROM bookings where  sitterid ='$var2'";
+               //$x=$_SESSION["username"];//add by anoud
+                //$x='amal@ht.mail';
+                // $sql = "SELECT sitterID FROM babysitter WHERE  sitteremail='$x'";
+                // $result3 = mysqli_query($conn, $sql);
+                // if($row = mysqli_fetch_row($result3))
+                //     {
+                //         $var1=$row[0];
+                //         $var2=(int)$var1;
+                        $query1 = "SELECT * FROM bookings where  Status_booking ='pending'";
                         $result1 = mysqli_query($conn, $query1);
                         if ($result1) {
-                            if($row = mysqli_fetch_row($result1)){
-                                if($row[6]=='pending'){
+                            while($row = mysqli_fetch_row($result1)){
+                                // if($row[6]=='pending'){
                                 echo "<table id='myTable' class='list'>
                                 <!-- Table with 3 columns -->
                                  <tr><td> <b> Child Name: $row[0] </b></td><td><button class='buttons1'> <a href='details.php?bookingID=".$row[9]."' role='button'> details</button> </a> </td>
                             
                                  </tr>
                                  
-                             </table>";}}}}
+                             </table>";}}
              /*   $rID="";
                 
                 if(isset($_GET['parentID']))
