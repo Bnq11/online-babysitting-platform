@@ -20,7 +20,9 @@ $end = $_POST['etime'];
 // $dateE=date_create($z);
 // $end= date_format($dateE,"Y-m-d H:i:s");
 
-$sqlupdate= "UPDATE bookings SET childName = '$name'  , childAge = '$age' , servicetype = '$service' , durationSTART = '$start' , durationEND = '$end' , Date_of_booking = '$date' WHERE bookingID = 3";
+
+
+$sqlupdate= "UPDATE bookings SET childName = '$name'  , childAge = '$age' , servicetype = '$service' , durationSTART = '$start' , durationEND = '$end' , Date_of_booking = '$date' WHERE bookingID ='$x' ";
 if( !($result = mysqli_query($conn , $sqlupdate))){
     print ("<p> Could not update request!</p>");
     die("Failed");

@@ -11,7 +11,7 @@ include 'includes/functions2.inc.php';
     DEFINE('DB_USER','root');
     DEFINE('DB_PSWD','');
     DEFINE('DB_HOST','localhost');
-    DEFINE('DB_NAME','test1');
+    DEFINE('DB_NAME','babysitterplatform');
 
     if (!$conn = mysqli_connect(DB_HOST,DB_USER,DB_PSWD))
         die("Connection failed.");
@@ -203,15 +203,6 @@ $parents ="SELECT * FROM parent where parentemail='$email'";
 $query=mysqli_query($conn, $parents);
 
 
-// if($row = mysqli_fetch_row($query)){
-
-// $var1 = $row[0];
-// $var2=(int)$var1;
-
-// $parents2 ="SELECT * FROM parent where parentID='$email'";
-// $query2=mysqli_query($conn, $parents2);
-// }
-
 if(mysqli_num_rows($query)>0){
 
 
@@ -276,7 +267,7 @@ if(mysqli_num_rows($query)>0){
 
 
 </form>
-</form>
+<!-- </form> -->
 
 
 
