@@ -69,7 +69,7 @@ function createParent($conn, $FirstName, $LastName, $Email, $Passwrd, $City, $Lo
     mysqli_stmt_bind_param($stmt, "ssssss", $FirstName, $LastName, $Passwrd, $Email, $City, $Location);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../menuparent.html"); ////////////link to parents page
+    header("location: ../signInP.php"); ////////////link to parents page
          exit();
  }
 
