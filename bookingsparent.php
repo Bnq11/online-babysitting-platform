@@ -194,7 +194,7 @@ if(false){header("location:signInP.php"); exit();}
      
      <tr>
          <td> <b> Duration start :<?php echo $user['durationSTART']; ?></b></td>
-         <td> <a href=" editPost.php?requestID=<?php echo $user['ID'] ;?>"  > <button type="button" class="buttone">EDIT</button> </a></td>
+         <td> <a href=" editPost.php?bookingID=<?php echo $user['bookingID'] ;?>"  > <button type="button" class="buttone">EDIT</button> </a></td>
          <td> <button type="button" class="buttone">DELETE</button></td>
 
      </tr>
