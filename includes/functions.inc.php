@@ -69,7 +69,7 @@ function createbabysitter($conn, $FirstName, $LastName, $Email, $Passwrd, $Natio
     mysqli_stmt_bind_param($stmt, "ssssssssss", $FirstName, $LastName,  $Passwrd, $Email, $Phone, $City, $Bio, $NationalID, $Age, $Gender,);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../menusitter.html"); ////////////link to babysitter page
+    header("location: ../signInS.php"); ////////////link to babysitter page
          exit();
  }
 
